@@ -1,0 +1,96 @@
+{
+  "note": "CLEAN CIC IIoT 2025 MITM packet-2 victim-disjoint (fixes the family-map name-token grouping + asymmetric-benign-holdout bug). GROUP_BY=sensor_realmac. XGB 150/6/0.1 seed42 n_jobs1; threshold=1%FPR on seen. Victim axis is dst/device, NOT attacker-disjoint (scope caveat).",
+  "group_by": "sensor_realmac",
+  "n_groups": 24,
+  "n_attack_flows": 6441,
+  "n_benign_flows": 4599,
+  "grouping_histogram": [
+    [
+      "28:87:ba:bd:c6:6c",
+      59
+    ],
+    [
+      "dc:a6:32:dc:28:46",
+      1
+    ]
+  ],
+  "random": {
+    "auc": 0.992,
+    "fpr": 0.021
+  },
+  "clean_disjoint": {
+    "auc_median": 0.7982,
+    "auc_range": [
+      0.6402,
+      0.8909
+    ],
+    "fpr_median": 0.691,
+    "fpr_range": [
+      0.0019,
+      0.8271
+    ],
+    "n_seeds": 5
+  },
+  "held_test_groups": [
+    "accelerometer-sensor",
+    "motion-sensor",
+    "mqtt-broker",
+    "myq-camera",
+    "rfid-sensor",
+    "soil-sensor",
+    "water-sensor"
+  ],
+  "training_pool": 17,
+  "sweep": [
+    {
+      "train_groups": 3,
+      "auc_median": 0.3912,
+      "auc_range": [
+        0.3384,
+        0.5627
+      ],
+      "fpr_median": 0.9308,
+      "n_seeds": 5
+    },
+    {
+      "train_groups": 5,
+      "auc_median": 0.6067,
+      "auc_range": [
+        0.2764,
+        0.6913
+      ],
+      "fpr_median": 0.9078,
+      "n_seeds": 5
+    },
+    {
+      "train_groups": 8,
+      "auc_median": 0.5709,
+      "auc_range": [
+        0.5007,
+        0.6572
+      ],
+      "fpr_median": 0.9078,
+      "n_seeds": 5
+    },
+    {
+      "train_groups": 12,
+      "auc_median": 0.6319,
+      "auc_range": [
+        0.4017,
+        0.7264
+      ],
+      "fpr_median": 0.9107,
+      "n_seeds": 5
+    },
+    {
+      "train_groups": 17,
+      "auc_median": 0.5785,
+      "auc_range": [
+        0.5785,
+        0.5785
+      ],
+      "fpr_median": 0.8847,
+      "n_seeds": 5
+    }
+  ]
+}

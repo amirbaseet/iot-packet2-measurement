@@ -1,0 +1,860 @@
+{
+  "census": {
+    "CICIoMT2024": "NOT_VIABLE: 19 classes, 5 victim devices total, ~1 per class (source: feasibility.json, prior)",
+    "CICIoT2023_infra_excluded": [
+      "3c:18:a0:41:c3:a0",
+      "44:bb:3b:00:39:07"
+    ],
+    "CICIoT2023_sensitivity_attack_classes_ge3victims": {
+      "1pct": 16,
+      "2pct": 16,
+      "5pct": 6,
+      "10pct": 1,
+      "20pct": 0
+    },
+    "CICIoT2023_verdict": "NOT_VIABLE at meaningful (>=5%) thresholds",
+    "CIC_IIoT2025_gate": {
+      "n_device_macs": 38,
+      "intersection": {
+        "mac_overlap": 2,
+        "oui_overlap": 4,
+        "new_macs": 36,
+        "new_ouis": 12,
+        "verdict": "MIXED \u2014 some shared device kits (OUI); new units present; watch the shared-kit confound"
+      }
+    }
+  },
+  "ciciot2023_mirai_pkt2": {
+    "random": {
+      "auc": 0.9901,
+      "recall_at_thr": 0.887,
+      "fpr_at_thr": 0.01,
+      "fpr_calib_seen": 0.0102,
+      "precision_at_thr": 0.9915,
+      "n_train": 22666,
+      "n_test": 9714,
+      "test_attack_frac": 0.567,
+      "train_attack_frac": 0.567,
+      "thr": 0.8958359956741333
+    },
+    "disjoint_auc": {
+      "n": 10,
+      "min": 0.5053,
+      "max": 0.9794,
+      "mean": 0.6956,
+      "median": 0.6635,
+      "std": 0.1599
+    },
+    "disjoint_fpr_at_thr": {
+      "n": 10,
+      "min": 0.1001,
+      "max": 0.9922,
+      "mean": 0.7523,
+      "median": 0.8331,
+      "std": 0.2618
+    },
+    "n_partitions": 10
+  },
+  "earliness": {
+    "packet-2": {
+      "random_auc": 0.9917,
+      "random_fpr": 0.0083,
+      "disjoint_auc_min_med_max": [
+        0.4013,
+        0.6721,
+        0.9748
+      ],
+      "disjoint_fpr_min_med_max": [
+        0.0848,
+        0.8315,
+        0.9981
+      ],
+      "at_chance": 3
+    },
+    "packet-20": {
+      "random_auc": 0.9945,
+      "random_fpr": 0.0071,
+      "disjoint_auc_min_med_max": [
+        0.4562,
+        0.7062,
+        0.9862
+      ],
+      "disjoint_fpr_min_med_max": [
+        0.083,
+        0.8961,
+        0.9966
+      ],
+      "at_chance": 2
+    },
+    "full-flow": {
+      "random_auc": 0.9944,
+      "random_fpr": 0.0114,
+      "disjoint_auc_min_med_max": [
+        0.4276,
+        0.7036,
+        0.9888
+      ],
+      "disjoint_fpr_min_med_max": [
+        0.0952,
+        0.8651,
+        0.9916
+      ],
+      "at_chance": 1
+    }
+  },
+  "recon_attacker_disjoint": {
+    "OSScan": {
+      "random_auc": 0.9676,
+      "random_fpr": 0.0099,
+      "disjoint_auc_median": 0.6649,
+      "disjoint_auc_range": [
+        0.5752,
+        0.8147
+      ],
+      "disjoint_fpr_median": 0.096
+    },
+    "PortScan": {
+      "random_auc": 0.9783,
+      "random_fpr": 0.0086,
+      "disjoint_auc_median": 0.8227,
+      "disjoint_auc_range": [
+        0.7056,
+        0.9387
+      ],
+      "disjoint_fpr_median": 0.0533
+    },
+    "HostDiscovery": {
+      "random_auc": 0.9891,
+      "random_fpr": 0.0097,
+      "disjoint_auc_median": 0.7628,
+      "disjoint_auc_range": [
+        0.6388,
+        0.8541
+      ],
+      "disjoint_fpr_median": 0.1198
+    },
+    "VulnerabilityScan": {
+      "random_auc": 0.9692,
+      "random_fpr": 0.012,
+      "disjoint_auc_median": 0.7542,
+      "disjoint_auc_range": [
+        0.6236,
+        0.8055
+      ],
+      "disjoint_fpr_median": 0.1298
+    }
+  },
+  "iiot2025_windowed_aggregate": {
+    "n_devices": 38,
+    "random": {
+      "auc": 0.9829,
+      "recall": 0.9207,
+      "fpr": 0.0093
+    },
+    "disjoint_auc_min_med_max": [
+      0.9659,
+      0.9816,
+      0.9883
+    ],
+    "disjoint_fpr_min_med_max": [
+      0.0137,
+      0.0284,
+      0.0687
+    ]
+  },
+  "iiot2025_windowed_per_family": {
+    "ddos": {
+      "attack_devices": 33,
+      "dual_label_devices": 33,
+      "n_attack_rows": 56692,
+      "random_auc": 0.99,
+      "random_fpr": 0.01,
+      "disjoint_auc_median": 0.983,
+      "disjoint_fpr_median": 0.008,
+      "disjoint_auc_range": [
+        0.975,
+        0.987
+      ],
+      "n_seeds": 5
+    },
+    "dos": {
+      "attack_devices": 34,
+      "dual_label_devices": 34,
+      "n_attack_rows": 57736,
+      "random_auc": 0.995,
+      "random_fpr": 0.009,
+      "disjoint_auc_median": 0.996,
+      "disjoint_fpr_median": 0.005,
+      "disjoint_auc_range": [
+        0.984,
+        0.998
+      ],
+      "n_seeds": 5
+    },
+    "recon": {
+      "attack_devices": 38,
+      "dual_label_devices": 38,
+      "n_attack_rows": 105848,
+      "random_auc": 0.974,
+      "random_fpr": 0.01,
+      "disjoint_auc_median": 0.96,
+      "disjoint_fpr_median": 0.022,
+      "disjoint_auc_range": [
+        0.948,
+        0.981
+      ],
+      "n_seeds": 5
+    },
+    "mitm": {
+      "attack_devices": 26,
+      "dual_label_devices": 26,
+      "n_attack_rows": 25490,
+      "random_auc": 0.995,
+      "random_fpr": 0.009,
+      "disjoint_auc_median": 0.989,
+      "disjoint_fpr_median": 0.065,
+      "disjoint_auc_range": [
+        0.963,
+        0.994
+      ],
+      "n_seeds": 5
+    },
+    "malware": {
+      "attack_devices": 9,
+      "dual_label_devices": 9,
+      "n_attack_rows": 24177,
+      "random_auc": 0.995,
+      "random_fpr": 0.011,
+      "disjoint_auc_median": 0.983,
+      "disjoint_fpr_median": 0.251,
+      "disjoint_auc_range": [
+        0.978,
+        0.993
+      ],
+      "n_seeds": 5
+    },
+    "bruteforce": {
+      "attack_devices": 5,
+      "dual_label_devices": 5,
+      "n_attack_rows": 6016,
+      "random_auc": 0.982,
+      "random_fpr": 0.306,
+      "disjoint_auc_median": 0.943,
+      "disjoint_fpr_median": 0.418,
+      "disjoint_auc_range": [
+        0.782,
+        0.999
+      ],
+      "n_seeds": 5
+    },
+    "web": {
+      "attack_devices": 1,
+      "dual_label_devices": 1,
+      "n_attack_rows": 9040,
+      "random_auc": 0.987,
+      "random_fpr": 0.309,
+      "disjoint_auc_median": null,
+      "disjoint_fpr_median": null,
+      "disjoint_auc_range": null,
+      "n_seeds": 0
+    }
+  },
+  "iiot2025_packet2_udpfrag": {
+    "n_victim_devices": 26,
+    "random": {
+      "auc": 1.0,
+      "fpr": 0.0159
+    },
+    "victim_disjoint_auc": [
+      0.9929,
+      0.9971,
+      0.9994
+    ],
+    "victim_disjoint_fpr": [
+      0.1846,
+      0.2262,
+      0.6145
+    ]
+  },
+  "iiot2025_packet2_mirai": {
+    "n_victim_devices": 8,
+    "random": {
+      "auc": 0.9994,
+      "fpr": 0.0159
+    },
+    "victim_disjoint_auc": [
+      0.5251,
+      0.9219,
+      0.9752
+    ],
+    "victim_disjoint_fpr": [
+      0.7804,
+      0.9688,
+      0.9944
+    ]
+  },
+  "iiot2025_packet2_family_sweep": {
+    "web": {
+      "n_victim_devices": 1,
+      "random_auc": 0.9995,
+      "random_fpr": 0.0127,
+      "disjoint_auc_min_med_max": null,
+      "disjoint_fpr_min_med_max": null
+    },
+    "bruteforce": {
+      "n_victim_devices": 5,
+      "random_auc": 0.9959,
+      "random_fpr": 0.0105,
+      "disjoint_auc_min_med_max": [
+        0.6372,
+        0.7397,
+        0.8558
+      ],
+      "disjoint_fpr_min_med_max": [
+        0.2832,
+        0.6808,
+        0.9033
+      ]
+    },
+    "dos_syn80": {
+      "n_victim_devices": 14,
+      "random_auc": 1.0,
+      "random_fpr": 0.0127,
+      "disjoint_auc_min_med_max": [
+        0.987,
+        0.9992,
+        1.0
+      ],
+      "disjoint_fpr_min_med_max": [
+        0.0,
+        0.3483,
+        0.902
+      ]
+    },
+    "recon": {
+      "n_victim_devices": 39,
+      "random_auc": 0.9968,
+      "random_fpr": 0.0063,
+      "disjoint_auc_min_med_max": [
+        0.4075,
+        0.938,
+        0.959
+      ],
+      "disjoint_fpr_min_med_max": [
+        0.1491,
+        0.3182,
+        0.8898
+      ]
+    },
+    "mitm": {
+      "n_victim_devices": 16,
+      "random_auc": 0.9847,
+      "random_fpr": 0.038,
+      "disjoint_auc_min_med_max": [
+        0.4033,
+        0.5293,
+        0.6788
+      ],
+      "disjoint_fpr_min_med_max": [
+        0.2168,
+        0.912,
+        0.9596
+      ]
+    }
+  },
+  "ciciot2023_mitm_dns_pkt2": {
+    "MITM_ArpSpoofing": {
+      "random_auc": 0.992,
+      "random_fpr": 0.0212,
+      "n_calibrated_folds": 2,
+      "disjoint_auc_per_fold": [
+        0.5988,
+        0.2713
+      ],
+      "disjoint_fpr_per_fold": [
+        0.9862,
+        0.9799
+      ],
+      "disjoint_auc": {
+        "n": 2,
+        "min": 0.2713,
+        "max": 0.5988,
+        "mean": 0.435,
+        "median": 0.435,
+        "std": 0.1638
+      },
+      "disjoint_fpr": {
+        "n": 2,
+        "min": 0.9799,
+        "max": 0.9862,
+        "mean": 0.983,
+        "median": 0.983,
+        "std": 0.0031
+      }
+    },
+    "DNS_Spoofing": {
+      "random_auc": 0.9963,
+      "random_fpr": 0.0113,
+      "n_calibrated_folds": 3,
+      "disjoint_auc_per_fold": [
+        0.7101,
+        0.4434,
+        0.8048
+      ],
+      "disjoint_fpr_per_fold": [
+        1.0,
+        0.9983,
+        0.9998
+      ],
+      "disjoint_auc": {
+        "n": 3,
+        "min": 0.4434,
+        "max": 0.8048,
+        "mean": 0.6528,
+        "median": 0.7101,
+        "std": 0.153
+      },
+      "disjoint_fpr": {
+        "n": 3,
+        "min": 0.9983,
+        "max": 1.0,
+        "mean": 0.9994,
+        "median": 0.9998,
+        "std": 0.0008
+      }
+    },
+    "note": "leave-one-victim-out over 3 census 5%-victims/class; folds reported individually (n=2 MITM, 3 DNS); MITM.csv holds 0 ARP frames -> measures redirected IP traffic, not the ARP spoof itself"
+  },
+  "iiot2025_devcount_sweep": {
+    "held_test_victims": 5,
+    "training_pool_available": 21,
+    "auc_by_train_victims": {
+      "5": 0.998,
+      "8": 0.9972,
+      "12": 0.9996,
+      "16": 0.9997,
+      "20": 0.9999,
+      "21": 0.9997
+    },
+    "fpr_by_train_victims": {
+      "5": 0.8868,
+      "8": 0.9064,
+      "12": 0.4025,
+      "16": 0.7179,
+      "20": 0.0399,
+      "21": 0.9522
+    },
+    "note": "WITHIN CIC IIoT 2025 udp-frag; only training-victim count varies; ranking flat -> device count is NOT the ranking driver; the cross-dataset 0.66-vs-0.997 gap is a dataset/attack effect"
+  },
+  "pooling_confound": {
+    "origin_auc_final": 0.9963,
+    "surviving_features": [
+      "sport",
+      "dport",
+      "iplen1"
+    ],
+    "dropped_features": [
+      "win2",
+      "flags2",
+      "iplen2",
+      "ttl2",
+      "win1",
+      "proto",
+      "flags1",
+      "ttl1",
+      "iat"
+    ],
+    "pooled_victims": 13,
+    "note": "origin control (predict lab from benign) stays ~1.0 even after dropping 9/12 features -> pooling confounded"
+  },
+  "feature_ablation": {
+    "ciciot2023": {
+      "CICIoT2023_MITM": {
+        "all14": {
+          "disjoint_auc": 0.4351,
+          "random_auc": 0.992
+        },
+        "no_stack": {
+          "disjoint_auc": 0.4332,
+          "random_auc": 0.9826
+        },
+        "no_sport": {
+          "disjoint_auc": 0.3928,
+          "random_auc": 0.9843
+        },
+        "no_identity": {
+          "disjoint_auc": 0.4211,
+          "random_auc": 0.9707
+        }
+      },
+      "CICIoT2023_DNS": {
+        "all14": {
+          "disjoint_auc": 0.7101,
+          "random_auc": 0.9963
+        },
+        "no_stack": {
+          "disjoint_auc": 0.6467,
+          "random_auc": 0.9939
+        },
+        "no_sport": {
+          "disjoint_auc": 0.6634,
+          "random_auc": 0.9936
+        },
+        "no_identity": {
+          "disjoint_auc": 0.6494,
+          "random_auc": 0.9907
+        }
+      },
+      "CICIoT2023_Mirai": {
+        "all14": {
+          "disjoint_auc": 0.6932,
+          "random_auc": 0.9903
+        },
+        "no_stack": {
+          "disjoint_auc": 0.7404,
+          "random_auc": 0.9864
+        },
+        "no_sport": {
+          "disjoint_auc": 0.7138,
+          "random_auc": 0.986
+        },
+        "no_identity": {
+          "disjoint_auc": 0.7707,
+          "random_auc": 0.9811
+        }
+      }
+    },
+    "iiot2025_udpfrag": {
+      "all14": {
+        "disjoint_auc": 0.9971,
+        "disjoint_fpr": 0.2262,
+        "random_auc": 1.0
+      },
+      "no_stack": {
+        "disjoint_auc": 0.9971,
+        "disjoint_fpr": 0.1609,
+        "random_auc": 0.9998
+      },
+      "no_sport": {
+        "disjoint_auc": 0.992,
+        "disjoint_fpr": 0.2295,
+        "random_auc": 1.0
+      },
+      "no_identity": {
+        "disjoint_auc": 0.994,
+        "disjoint_fpr": 0.1589,
+        "random_auc": 0.9998
+      },
+      "no_size": {
+        "disjoint_auc": 0.9929,
+        "disjoint_fpr": 0.5315,
+        "random_auc": 0.9997
+      }
+    },
+    "note": "masks drop identity fields (ttl/win=stack, sport=allocation) and, for the flood, no_size drops the attack channel. Disjoint AUC barely moves under any mask -> the signal is redundantly encoded, NOT localizable to a few fields (null-localization); the isolation experiment the reviewer asked for returned null. Flood no_size: AUC holds 0.99 but FPR doubles 0.23->0.53."
+  },
+  "wilson_ci_disjoint_fpr": {
+    "MITM-ArpSpoofing": [
+      {
+        "fpr": 0.9862,
+        "wilson95": [
+          0.9813,
+          0.9899
+        ],
+        "benign_n": 2836
+      },
+      {
+        "fpr": 0.9799,
+        "wilson95": [
+          0.9747,
+          0.9841
+        ],
+        "benign_n": 3436
+      }
+    ],
+    "DNS_Spoofing": [
+      {
+        "fpr": 1.0,
+        "wilson95": [
+          0.9994,
+          1.0
+        ],
+        "benign_n": 6321
+      },
+      {
+        "fpr": 0.9983,
+        "wilson95": [
+          0.9962,
+          0.9992
+        ],
+        "benign_n": 3442
+      },
+      {
+        "fpr": 0.9998,
+        "wilson95": [
+          0.9987,
+          1.0
+        ],
+        "benign_n": 4367
+      }
+    ],
+    "Mirai_flood": [
+      {
+        "fpr": 0.519,
+        "wilson95": [
+          0.5005,
+          0.5372
+        ],
+        "benign_n": 2837
+      },
+      {
+        "fpr": 0.9015,
+        "wilson95": [
+          0.8929,
+          0.9094
+        ],
+        "benign_n": 5064
+      },
+      {
+        "fpr": 0.8182,
+        "wilson95": [
+          0.8097,
+          0.8265
+        ],
+        "benign_n": 8076
+      },
+      {
+        "fpr": 0.8479,
+        "wilson95": [
+          0.839,
+          0.8564
+        ],
+        "benign_n": 6555
+      },
+      {
+        "fpr": 0.1001,
+        "wilson95": [
+          0.0883,
+          0.1132
+        ],
+        "benign_n": 2229
+      },
+      {
+        "fpr": 0.9922,
+        "wilson95": [
+          0.9894,
+          0.9942
+        ],
+        "benign_n": 5242
+      },
+      {
+        "fpr": 0.9852,
+        "wilson95": [
+          0.9808,
+          0.9886
+        ],
+        "benign_n": 3719
+      },
+      {
+        "fpr": 0.7233,
+        "wilson95": [
+          0.713,
+          0.7333
+        ],
+        "benign_n": 7473
+      },
+      {
+        "fpr": 0.6621,
+        "wilson95": [
+          0.6499,
+          0.6739
+        ],
+        "benign_n": 5950
+      },
+      {
+        "fpr": 0.9738,
+        "wilson95": [
+          0.9703,
+          0.9769
+        ],
+        "benign_n": 8961
+      }
+    ],
+    "note": "Wilson 95% score interval on device-disjoint FPR; tight intervals (<2pp for MITM/DNS at 98-100%) -> the operating-point failure is not sampling noise; Mirai spans 10-99% across folds"
+  },
+  "coverage_400k": {
+    "benign_total_packets": 2588113,
+    "cap": 400000,
+    "back_steps": 506,
+    "max_back_delta_s": 2e-06,
+    "elapsed_at_400k_s": 5812.237,
+    "total_duration_s": 43199.732,
+    "victim_macs_in_first_400k": 26,
+    "udp_frag_victim_macs": 26,
+    "note": "the family-map -c 400000 cap is effectively chronological (max reorder 2us) and takes the first ~1.6h of a 12h capture; all 26 victim MACs appear in it -> full device coverage, benign side not biased"
+  },
+  "flow_eligibility": {
+    "ddos_udpfrag": {
+      "eligible_flow_frac": 0.9926,
+      "eligible_packet_frac": 0.9999
+    },
+    "dos_syn80": {
+      "eligible_flow_frac": 0.8847,
+      "eligible_packet_frac": 0.9727
+    },
+    "mitm": {
+      "eligible_flow_frac": 0.4983,
+      "eligible_packet_frac": 0.9999
+    },
+    "recon": {
+      "eligible_flow_frac": 0.0118,
+      "eligible_packet_frac": 0.0639
+    },
+    "bruteforce": {
+      "eligible_flow_frac": 0.1506,
+      "eligible_packet_frac": 0.9578
+    },
+    "malware_mirai": {
+      "eligible_flow_frac": 0.0899,
+      "eligible_packet_frac": 0.6516
+    },
+    "benign": {
+      "eligible_flow_frac": 0.269,
+      "eligible_packet_frac": 0.9857
+    },
+    "note": "fraction of directional flow keys reaching a 2nd same-direction packet (packet-2 eligible); swings 99%(flood)->1.2%(recon), 9%(Mirai) -> per-family AUC/FPR describe a label-correlated subset"
+  },
+  "iiot2025_mitm_clean": {
+    "n_groups": 24,
+    "random": {
+      "auc": 0.992,
+      "fpr": 0.021
+    },
+    "clean_disjoint": {
+      "auc_median": 0.7982,
+      "auc_range": [
+        0.6402,
+        0.8909
+      ],
+      "fpr_median": 0.691,
+      "fpr_range": [
+        0.0019,
+        0.8271
+      ],
+      "n_seeds": 5
+    },
+    "sweep": {
+      "3": 0.3912,
+      "5": 0.6067,
+      "8": 0.5709,
+      "12": 0.6319,
+      "17": 0.5785
+    },
+    "note": "CLEAN CIC IIoT 2025 MITM device-disjoint (24 victim sensors, real-MAC symmetric holdout). Neither this (AUC 0.80/FPR 0.69, benign-sparse: sensors have 4-12 benign flows) NOR the earlier 0.53/91% (defective split) is a trustworthy number. MITM collapse rests on CICIoT2023 (AUC 0.44, FPR 98%). SWEEP survives: AUC does not climb with training victims (0.39->0.72, no trend), FPR ~90% -> no recovery from device count"
+  },
+  "windowed_matched_udpfrag": {
+    "disjoint": {
+      "auc_median": 0.9727,
+      "auc_range": [
+        0.9622,
+        0.9778
+      ],
+      "fpr_median": 0.035,
+      "fpr_range": [
+        0.0138,
+        0.3753
+      ],
+      "n_seeds": 5
+    },
+    "random": {
+      "auc": 0.9945,
+      "fpr": 0.0095
+    },
+    "matched_victims": 26,
+    "n_feature_cols": 58,
+    "packet2_reference": {
+      "auc": 0.997,
+      "fpr_median": 0.226
+    },
+    "note": "MATCHED windowed vs packet-2 on the SAME udp-frag victims: windowed disjoint AUC 0.973 / FPR median 0.035 vs packet-2 0.997 / 0.226 -> windowed keeps ranking, cuts the operating point 22.6%->3.5% (range 1.4-37.5%, not perfectly stable). Cost: per-device windows, not packet-2 inline."
+  },
+  "mitm_benign_sparsity": {
+    "sensor_benign_range": [
+      4,
+      12
+    ],
+    "n_sensors": 14,
+    "all_device_benign_min": 2,
+    "all_device_benign_max": 1507,
+    "note": "CIC IIoT 2025 MITM victim SENSORS carry 4-12 benign flows each (14 sensors); chatty devices reach 1507 -> device-disjoint operating point unmeasurable, dominated by which device lands in the fold"
+  },
+  "flow_eligibility_ciciot2023": {
+    "MITM-ArpSpoofing": {
+      "eligible_flow_frac": 0.4007,
+      "verdict": "FAILS (AUC 0.44)"
+    },
+    "DNS_Spoofing": {
+      "eligible_flow_frac": 0.372,
+      "verdict": "FAILS (AUC 0.44-0.80)"
+    },
+    "Mirai_flood": {
+      "eligible_flow_frac": 0.5195,
+      "verdict": "FAILS (AUC 0.66)"
+    },
+    "Recon": {
+      "eligible_flow_frac": 0.0839,
+      "verdict": "attacker-axis (0.66-0.82)"
+    },
+    "Benign": {
+      "eligible_flow_frac": 0.5509,
+      "verdict": "-"
+    },
+    "note": "round-2 confound check: CICIoT2023 failing families MITM 40%, DNS 37%, Mirai 52% eligible (Benign 55%). Mirai FAILS at 52% here vs 9% on CIC IIoT 2025 -> same family+verdict across a 6x eligibility gap, so eligibility does not set the verdict; length is not a packet-2 feature"
+  },
+  "fingerprint_positive": {
+    "CIC_IIoT2025": {
+      "n_devices": 8,
+      "accuracy": 0.9862,
+      "majority_baseline_acc": 0.6116,
+      "macro_ovr_auc": 0.999,
+      "per_device_ovr_auc": {
+        "min": 0.9968,
+        "median": 0.9999,
+        "max": 1.0
+      },
+      "top_features": [
+        "win2",
+        "iplen1",
+        "iplen2",
+        "ttl1",
+        "win1"
+      ],
+      "gateway_excluded": [
+        "28:87:ba:bd:c6:6c"
+      ]
+    },
+    "CICIoT2023": {
+      "n_devices": 43,
+      "accuracy": 0.9251,
+      "majority_baseline_acc": 0.0577,
+      "macro_ovr_auc": 0.998,
+      "per_device_ovr_auc": {
+        "min": 0.9838,
+        "median": 0.9996,
+        "max": 1.0
+      },
+      "top_features": [
+        "win2",
+        "win1",
+        "ttl1",
+        "flags1",
+        "iplen1"
+      ],
+      "gateway_excluded": [
+        "3c:18:a0:41:c3:a0",
+        "40:5d:82:35:14:c8"
+      ]
+    },
+    "note": "positive fingerprint test: predict DEVICE from BENIGN packet-2 features (NOT device-disjoint; device is the label; infrastructure MACs excluded). TWO datasets: CIC IIoT 2025 macro-AUC 0.999 / acc 0.986 vs 0.612 over 8 devices; CICIoT2023 macro-AUC 0.998 / acc 0.925 vs 0.058 over 43 devices. Both fingerprints are carried by TCP window + TTL + IP length. Demonstrates the channel positively where the ablation null could only infer it"
+  }
+}

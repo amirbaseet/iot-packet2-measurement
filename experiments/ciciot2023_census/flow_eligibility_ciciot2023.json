@@ -1,0 +1,40 @@
+{
+  "note": "CICIoT2023 flow-eligibility per family (2nd-same-direction-packet fraction), to test whether eligibility predicts the device-disjoint verdict. If failing families are HIGH-eligible here, eligibility is not the confound.",
+  "families": {
+    "MITM-ArpSpoofing": {
+      "total_flow_keys": 89929,
+      "eligible_flow_keys": 36036,
+      "eligible_flow_frac": 0.4007,
+      "eligible_packet_frac": 0.9778,
+      "disjoint_verdict": "FAILS (AUC 0.44)"
+    },
+    "DNS_Spoofing": {
+      "total_flow_keys": 102175,
+      "eligible_flow_keys": 38005,
+      "eligible_flow_frac": 0.372,
+      "eligible_packet_frac": 0.963,
+      "disjoint_verdict": "FAILS (AUC 0.44-0.80)"
+    },
+    "Mirai_flood": {
+      "total_flow_keys": 35022,
+      "eligible_flow_keys": 18195,
+      "eligible_flow_frac": 0.5195,
+      "eligible_packet_frac": 0.9984,
+      "disjoint_verdict": "FAILS (AUC 0.66)"
+    },
+    "Recon": {
+      "total_flow_keys": 1324480,
+      "eligible_flow_keys": 111124,
+      "eligible_flow_frac": 0.0839,
+      "eligible_packet_frac": 0.5996,
+      "disjoint_verdict": "attacker-axis (0.66-0.82)"
+    },
+    "Benign": {
+      "total_flow_keys": 424116,
+      "eligible_flow_keys": 233628,
+      "eligible_flow_frac": 0.5509,
+      "eligible_packet_frac": 0.9822,
+      "disjoint_verdict": "-"
+    }
+  }
+}

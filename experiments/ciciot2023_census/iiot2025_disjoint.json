@@ -1,0 +1,23 @@
+{
+  "note": "CIC IIoT 2025 windowed features (NOT packet-2); behavioural only; binary attack/benign; thr=1%FPR seen; seed-swept",
+  "n_features": 58,
+  "n_rows": 685671,
+  "n_devices": 38,
+  "n_devices_dual_label": 38,
+  "random": {
+    "auc": 0.9829,
+    "recall": 0.9207,
+    "fpr": 0.0093
+  },
+  "disjoint_auc": [
+    0.9659,
+    0.9816,
+    0.9883
+  ],
+  "disjoint_fpr": [
+    0.0137,
+    0.0284,
+    0.0687
+  ],
+  "disjoint_recall_median": 0.9197
+}

@@ -1,0 +1,69 @@
+{
+  "note": "fraction of directional flow keys that reach a 2nd same-direction packet (= packet-2 eligible). tshark -c 400000 per pcap, same population as the family map.",
+  "cap": "400000",
+  "families": {
+    "ddos_udpfrag": {
+      "total_flow_keys": 170644,
+      "eligible_flow_keys": 169377,
+      "eligible_flow_frac": 0.9926,
+      "total_packets": 10388238,
+      "packets_in_eligible_flows": 10386971,
+      "eligible_packet_frac": 0.9999,
+      "n_pcaps": 26
+    },
+    "dos_syn80": {
+      "total_flow_keys": 1280215,
+      "eligible_flow_keys": 1132566,
+      "eligible_flow_frac": 0.8847,
+      "total_packets": 5414598,
+      "packets_in_eligible_flows": 5266949,
+      "eligible_packet_frac": 0.9727,
+      "n_pcaps": 14
+    },
+    "mitm": {
+      "total_flow_keys": 2378,
+      "eligible_flow_keys": 1185,
+      "eligible_flow_frac": 0.4983,
+      "total_packets": 10232297,
+      "packets_in_eligible_flows": 10231104,
+      "eligible_packet_frac": 0.9999,
+      "n_pcaps": 60
+    },
+    "recon": {
+      "total_flow_keys": 14884671,
+      "eligible_flow_keys": 175500,
+      "eligible_flow_frac": 0.0118,
+      "total_packets": 15713031,
+      "packets_in_eligible_flows": 1003860,
+      "eligible_packet_frac": 0.0639,
+      "n_pcaps": 233
+    },
+    "bruteforce": {
+      "total_flow_keys": 9765,
+      "eligible_flow_keys": 1471,
+      "eligible_flow_frac": 0.1506,
+      "total_packets": 196417,
+      "packets_in_eligible_flows": 188123,
+      "eligible_packet_frac": 0.9578,
+      "n_pcaps": 8
+    },
+    "malware_mirai": {
+      "total_flow_keys": 413054,
+      "eligible_flow_keys": 37124,
+      "eligible_flow_frac": 0.0899,
+      "total_packets": 1079164,
+      "packets_in_eligible_flows": 703234,
+      "eligible_packet_frac": 0.6516,
+      "n_pcaps": 16
+    },
+    "benign": {
+      "total_flow_keys": 5855,
+      "eligible_flow_keys": 1575,
+      "eligible_flow_frac": 0.269,
+      "total_packets": 298293,
+      "packets_in_eligible_flows": 294013,
+      "eligible_packet_frac": 0.9857,
+      "n_pcaps": 1
+    }
+  }
+}

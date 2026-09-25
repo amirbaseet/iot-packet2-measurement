@@ -1,0 +1,747 @@
+{
+  "dataset": "CICIoT2023 (Packet From PCAP CSVs, archive.zip)",
+  "n_classes_merged": 18,
+  "classes": [
+    "Backdoor_Malware",
+    "Benign",
+    "BrowserHijacking",
+    "CommandInjection",
+    "DNS_Spoofing",
+    "DictionaryBruteForce",
+    "MITM-ArpSpoofing",
+    "Mirai-greeth_flood",
+    "Mirai-greip_flood",
+    "Mirai-udpplain",
+    "Recon-HostDiscovery",
+    "Recon-OSScan",
+    "Recon-PingSweep",
+    "Recon-PortScan",
+    "SqlInjection",
+    "Uploading_Attack",
+    "VulnerabilityScan",
+    "XSS"
+  ],
+  "total_packets": 32283802,
+  "per_class_packets": {
+    "Backdoor_Malware": 30399,
+    "Benign": 10712445,
+    "BrowserHijacking": 55957,
+    "CommandInjection": 51731,
+    "DNS_Spoofing": 1732495,
+    "DictionaryBruteForce": 124549,
+    "MITM-ArpSpoofing": 2427505,
+    "Mirai-greeth_flood": 3340156,
+    "Mirai-greip_flood": 3470686,
+    "Mirai-udpplain": 3622666,
+    "Recon-HostDiscovery": 1269813,
+    "Recon-OSScan": 958051,
+    "Recon-PingSweep": 19764,
+    "Recon-PortScan": 802300,
+    "SqlInjection": 49995,
+    "Uploading_Attack": 11778,
+    "VulnerabilityScan": 3567333,
+    "XSS": 36179
+  },
+  "check1_src_class_count_histogram": {
+    "1": 3,
+    "2": 3,
+    "3": 2,
+    "4": 3,
+    "6": 2,
+    "7": 1,
+    "8": 1,
+    "9": 3,
+    "10": 1,
+    "11": 3,
+    "12": 4,
+    "13": 3,
+    "14": 3,
+    "16": 5,
+    "17": 6,
+    "18": 45
+  },
+  "check1_dst_class_count_histogram": {
+    "1": 16,
+    "2": 4,
+    "3": 3,
+    "4": 2,
+    "6": 3,
+    "7": 2,
+    "8": 1,
+    "9": 1,
+    "10": 2,
+    "11": 5,
+    "12": 4,
+    "13": 2,
+    "14": 2,
+    "15": 2,
+    "16": 4,
+    "17": 7,
+    "18": 48
+  },
+  "A_frozen_src_anchored": {
+    "procedure": "SAME as CICIoMT2024 stage2: victim if src in <=40% of classes; >=3 victims in >=10 classes",
+    "role_counts": {
+      "infrastructure": 56,
+      "victim": 14,
+      "cross_class": 18
+    },
+    "n_victim_macs": 14,
+    "classes_with_ge3_victims": [
+      "Benign",
+      "DNS_Spoofing",
+      "DictionaryBruteForce",
+      "MITM-ArpSpoofing",
+      "Recon-OSScan",
+      "Recon-PingSweep",
+      "Recon-PortScan",
+      "VulnerabilityScan"
+    ],
+    "verdict": "NOT_VIABLE",
+    "per_class_src_victim_counts": {
+      "Backdoor_Malware": 2,
+      "Benign": 3,
+      "BrowserHijacking": 1,
+      "CommandInjection": 2,
+      "DNS_Spoofing": 3,
+      "DictionaryBruteForce": 3,
+      "MITM-ArpSpoofing": 4,
+      "Mirai-greeth_flood": 1,
+      "Mirai-greip_flood": 1,
+      "Mirai-udpplain": 1,
+      "Recon-HostDiscovery": 1,
+      "Recon-OSScan": 6,
+      "Recon-PingSweep": 4,
+      "Recon-PortScan": 5,
+      "SqlInjection": 2,
+      "Uploading_Attack": 2,
+      "VulnerabilityScan": 3,
+      "XSS": 2
+    }
+  },
+  "B_dst_concentration": {
+    "procedure": "victim = destination MAC absorbing >= threshold of that class's packets (real devices only; bcast/mcast excluded)",
+    "verdict_ge1pct": {
+      "verdict": "VIABLE",
+      "classes_ok": [
+        "Backdoor_Malware",
+        "Benign",
+        "BrowserHijacking",
+        "CommandInjection",
+        "DNS_Spoofing",
+        "DictionaryBruteForce",
+        "MITM-ArpSpoofing",
+        "Mirai-greeth_flood",
+        "Mirai-greip_flood",
+        "Mirai-udpplain",
+        "Recon-HostDiscovery",
+        "Recon-OSScan",
+        "Recon-PingSweep",
+        "Recon-PortScan",
+        "SqlInjection",
+        "Uploading_Attack",
+        "VulnerabilityScan",
+        "XSS"
+      ]
+    },
+    "verdict_ge5pct": {
+      "verdict": "VIABLE",
+      "classes_ok": [
+        "Benign",
+        "BrowserHijacking",
+        "DNS_Spoofing",
+        "DictionaryBruteForce",
+        "MITM-ArpSpoofing",
+        "Mirai-greip_flood",
+        "Mirai-udpplain",
+        "Recon-OSScan",
+        "Recon-PingSweep",
+        "Recon-PortScan"
+      ]
+    },
+    "verdict_ge10pct": {
+      "verdict": "NOT_VIABLE",
+      "classes_ok": [
+        "Mirai-greip_flood"
+      ]
+    },
+    "per_class": {
+      "Backdoor_Malware": {
+        "victims_ge_1pct": 14,
+        "victims_ge_5pct": 2,
+        "victims_ge_10pct": 1,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            12690,
+            0.417
+          ],
+          [
+            "2c:71:ff:05:f1:15",
+            2164,
+            0.071
+          ],
+          [
+            "70:ee:50:68:0e:32",
+            1389,
+            0.046
+          ],
+          [
+            "cc:f4:11:9c:d0:00",
+            1044,
+            0.034
+          ],
+          [
+            "dc:a6:32:dc:27:d5",
+            902,
+            0.03
+          ]
+        ]
+      },
+      "Benign": {
+        "victims_ge_1pct": 7,
+        "victims_ge_5pct": 3,
+        "victims_ge_10pct": 2,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            5021820,
+            0.469
+          ],
+          [
+            "40:5d:82:35:14:c8",
+            2404896,
+            0.224
+          ],
+          [
+            "44:bb:3b:00:39:07",
+            681730,
+            0.064
+          ],
+          [
+            "a0:d0:dc:c4:08:ff",
+            305980,
+            0.029
+          ],
+          [
+            "2c:71:ff:05:f1:15",
+            290251,
+            0.027
+          ]
+        ]
+      },
+      "BrowserHijacking": {
+        "victims_ge_1pct": 11,
+        "victims_ge_5pct": 4,
+        "victims_ge_10pct": 1,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            20437,
+            0.365
+          ],
+          [
+            "dc:a6:32:c9:e5:02",
+            5395,
+            0.096
+          ],
+          [
+            "dc:a6:32:c9:e4:c6",
+            4725,
+            0.084
+          ],
+          [
+            "dc:a6:32:dc:27:d5",
+            4613,
+            0.082
+          ],
+          [
+            "2c:71:ff:05:f1:15",
+            2789,
+            0.05
+          ]
+        ]
+      },
+      "CommandInjection": {
+        "victims_ge_1pct": 13,
+        "victims_ge_5pct": 2,
+        "victims_ge_10pct": 2,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            19180,
+            0.371
+          ],
+          [
+            "dc:a6:32:c9:e6:f4",
+            9870,
+            0.191
+          ],
+          [
+            "70:ee:50:68:0e:32",
+            2079,
+            0.04
+          ],
+          [
+            "56:4f:8a:e1:f3:2d",
+            1997,
+            0.039
+          ],
+          [
+            "44:bb:3b:00:39:07",
+            1124,
+            0.022
+          ]
+        ]
+      },
+      "DNS_Spoofing": {
+        "victims_ge_1pct": 14,
+        "victims_ge_5pct": 4,
+        "victims_ge_10pct": 2,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            715388,
+            0.413
+          ],
+          [
+            "56:4f:8a:e1:f3:2d",
+            193678,
+            0.112
+          ],
+          [
+            "dc:a6:32:dc:27:d5",
+            144331,
+            0.083
+          ],
+          [
+            "24:05:88:30:6f:89",
+            101314,
+            0.058
+          ],
+          [
+            "a0:d0:dc:c4:08:ff",
+            54950,
+            0.032
+          ]
+        ]
+      },
+      "DictionaryBruteForce": {
+        "victims_ge_1pct": 16,
+        "victims_ge_5pct": 3,
+        "victims_ge_10pct": 2,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            42302,
+            0.34
+          ],
+          [
+            "dc:a6:32:dc:27:d5",
+            15694,
+            0.126
+          ],
+          [
+            "dc:a6:32:c9:e4:c6",
+            9491,
+            0.076
+          ],
+          [
+            "44:bb:3b:00:39:07",
+            4876,
+            0.039
+          ],
+          [
+            "70:ee:50:68:0e:32",
+            4803,
+            0.039
+          ]
+        ]
+      },
+      "MITM-ArpSpoofing": {
+        "victims_ge_1pct": 11,
+        "victims_ge_5pct": 4,
+        "victims_ge_10pct": 2,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            1111872,
+            0.458
+          ],
+          [
+            "94:39:e5:5d:27:a6",
+            275703,
+            0.114
+          ],
+          [
+            "56:4f:8a:e1:f3:2d",
+            227196,
+            0.094
+          ],
+          [
+            "08:7c:39:ce:6e:2a",
+            213709,
+            0.088
+          ],
+          [
+            "dc:a6:32:dc:27:d5",
+            70290,
+            0.029
+          ]
+        ]
+      },
+      "Mirai-greeth_flood": {
+        "victims_ge_1pct": 3,
+        "victims_ge_5pct": 2,
+        "victims_ge_10pct": 2,
+        "top_real_dst": [
+          [
+            "1c:fe:2b:98:16:dd",
+            2439864,
+            0.73
+          ],
+          [
+            "9c:8e:cd:1d:ab:9f",
+            816464,
+            0.244
+          ],
+          [
+            "3c:18:a0:41:c3:a0",
+            44061,
+            0.013
+          ],
+          [
+            "56:4f:8a:e1:f3:2d",
+            22458,
+            0.007
+          ],
+          [
+            "7c:78:b2:86:0d:81",
+            1497,
+            0.0
+          ]
+        ]
+      },
+      "Mirai-greip_flood": {
+        "victims_ge_1pct": 5,
+        "victims_ge_5pct": 4,
+        "victims_ge_10pct": 4,
+        "top_real_dst": [
+          [
+            "1c:12:b0:9b:0c:ec",
+            1267780,
+            0.365
+          ],
+          [
+            "9c:8e:cd:1d:ab:9f",
+            1172806,
+            0.338
+          ],
+          [
+            "1c:fe:2b:98:16:dd",
+            571069,
+            0.165
+          ],
+          [
+            "08:7c:39:ce:6e:2a",
+            362119,
+            0.104
+          ],
+          [
+            "3c:18:a0:41:c3:a0",
+            43645,
+            0.013
+          ]
+        ]
+      },
+      "Mirai-udpplain": {
+        "victims_ge_1pct": 3,
+        "victims_ge_5pct": 3,
+        "victims_ge_10pct": 2,
+        "top_real_dst": [
+          [
+            "1c:fe:2b:98:16:dd",
+            1953500,
+            0.539
+          ],
+          [
+            "08:7c:39:ce:6e:2a",
+            1262836,
+            0.349
+          ],
+          [
+            "cc:f4:11:9c:d0:00",
+            346762,
+            0.096
+          ],
+          [
+            "3c:18:a0:41:c3:a0",
+            28689,
+            0.008
+          ],
+          [
+            "56:4f:8a:e1:f3:2d",
+            4795,
+            0.001
+          ]
+        ]
+      },
+      "Recon-HostDiscovery": {
+        "victims_ge_1pct": 15,
+        "victims_ge_5pct": 2,
+        "victims_ge_10pct": 2,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            290881,
+            0.229
+          ],
+          [
+            "dc:a6:32:dc:27:d5",
+            271577,
+            0.214
+          ],
+          [
+            "28:6d:97:7a:2b:2d",
+            31770,
+            0.025
+          ],
+          [
+            "2c:71:ff:05:f1:15",
+            26050,
+            0.021
+          ],
+          [
+            "56:4f:8a:e1:f3:2d",
+            23996,
+            0.019
+          ]
+        ]
+      },
+      "Recon-OSScan": {
+        "victims_ge_1pct": 11,
+        "victims_ge_5pct": 4,
+        "victims_ge_10pct": 2,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            319017,
+            0.333
+          ],
+          [
+            "dc:a6:32:dc:27:d5",
+            98446,
+            0.103
+          ],
+          [
+            "40:5d:82:35:14:c8",
+            74585,
+            0.078
+          ],
+          [
+            "ac:17:02:05:34:27",
+            67903,
+            0.071
+          ],
+          [
+            "44:bb:3b:00:39:07",
+            43553,
+            0.045
+          ]
+        ]
+      },
+      "Recon-PingSweep": {
+        "victims_ge_1pct": 10,
+        "victims_ge_5pct": 3,
+        "victims_ge_10pct": 1,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            8702,
+            0.44
+          ],
+          [
+            "ac:17:02:05:34:27",
+            1962,
+            0.099
+          ],
+          [
+            "70:ee:50:68:0e:32",
+            1231,
+            0.062
+          ],
+          [
+            "44:bb:3b:00:39:07",
+            976,
+            0.049
+          ],
+          [
+            "40:5d:82:35:14:c8",
+            755,
+            0.038
+          ]
+        ]
+      },
+      "Recon-PortScan": {
+        "victims_ge_1pct": 13,
+        "victims_ge_5pct": 3,
+        "victims_ge_10pct": 2,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            220762,
+            0.275
+          ],
+          [
+            "dc:a6:32:dc:27:d5",
+            120941,
+            0.151
+          ],
+          [
+            "ac:17:02:05:34:27",
+            61438,
+            0.077
+          ],
+          [
+            "00:0c:29:1c:55:4a",
+            29929,
+            0.037
+          ],
+          [
+            "40:5d:82:35:14:c8",
+            25210,
+            0.031
+          ]
+        ]
+      },
+      "SqlInjection": {
+        "victims_ge_1pct": 12,
+        "victims_ge_5pct": 2,
+        "victims_ge_10pct": 2,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            19927,
+            0.399
+          ],
+          [
+            "ac:17:02:05:34:27",
+            7334,
+            0.147
+          ],
+          [
+            "dc:a6:32:dc:27:d5",
+            2219,
+            0.044
+          ],
+          [
+            "a0:d0:dc:c4:08:ff",
+            2204,
+            0.044
+          ],
+          [
+            "1c:12:b0:9b:0c:ec",
+            1929,
+            0.039
+          ]
+        ]
+      },
+      "Uploading_Attack": {
+        "victims_ge_1pct": 17,
+        "victims_ge_5pct": 1,
+        "victims_ge_10pct": 1,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            4973,
+            0.422
+          ],
+          [
+            "dc:a6:32:c9:e6:f4",
+            546,
+            0.046
+          ],
+          [
+            "cc:f4:11:9c:d0:00",
+            353,
+            0.03
+          ],
+          [
+            "70:ee:50:68:0e:32",
+            332,
+            0.028
+          ],
+          [
+            "44:bb:3b:00:39:07",
+            330,
+            0.028
+          ]
+        ]
+      },
+      "VulnerabilityScan": {
+        "victims_ge_1pct": 11,
+        "victims_ge_5pct": 2,
+        "victims_ge_10pct": 2,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            1399570,
+            0.392
+          ],
+          [
+            "ac:17:02:05:34:27",
+            475971,
+            0.133
+          ],
+          [
+            "dc:a6:32:dc:27:d5",
+            172096,
+            0.048
+          ],
+          [
+            "a0:d0:dc:c4:08:ff",
+            157814,
+            0.044
+          ],
+          [
+            "1c:12:b0:9b:0c:ec",
+            144934,
+            0.041
+          ]
+        ]
+      },
+      "XSS": {
+        "victims_ge_1pct": 16,
+        "victims_ge_5pct": 1,
+        "victims_ge_10pct": 1,
+        "top_real_dst": [
+          [
+            "3c:18:a0:41:c3:a0",
+            15448,
+            0.427
+          ],
+          [
+            "70:ee:50:68:0e:32",
+            1679,
+            0.046
+          ],
+          [
+            "56:4f:8a:e1:f3:2d",
+            1493,
+            0.041
+          ],
+          [
+            "44:bb:3b:00:39:07",
+            1110,
+            0.031
+          ],
+          [
+            "cc:f4:11:9c:d0:00",
+            1038,
+            0.029
+          ]
+        ]
+      }
+    }
+  }
+}

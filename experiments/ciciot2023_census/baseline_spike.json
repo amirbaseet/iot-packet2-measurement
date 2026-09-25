@@ -1,0 +1,33 @@
+{
+  "note": "per-device IsolationForest; thr=1%FPR on device's held-out benign; NO detection claim; same-session benign only",
+  "min_benign": 400,
+  "per_device": {
+    "08:7c:39:ce:6e:2a": {
+      "benign": 2836,
+      "flood": 372,
+      "fpr_heldout_benign": 0.0106,
+      "flood_detect_rate": 0.3414
+    },
+    "1c:12:b0:9b:0c:ec": {
+      "skip": "benign=0 flood=352"
+    },
+    "1c:fe:2b:98:16:dd": {
+      "benign": 2228,
+      "flood": 1098,
+      "fpr_heldout_benign": 0.0105,
+      "flood_detect_rate": 0.6175
+    },
+    "9c:8e:cd:1d:ab:9f": {
+      "benign": 5243,
+      "flood": 522,
+      "fpr_heldout_benign": 0.0102,
+      "flood_detect_rate": 0.0115
+    },
+    "cc:f4:11:9c:d0:00": {
+      "benign": 3721,
+      "flood": 720,
+      "fpr_heldout_benign": 0.0116,
+      "flood_detect_rate": 0.0319
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "note": "WITHIN CIC IIoT 2025 udp-frag; fixed held-out test victims; vary training-victim count; packet-2 features only; XGB 150/6/0.1 seed42 n_jobs1; threshold=1%FPR on seen",
+  "held_test_victims": [
+    "wisenet-camera",
+    "rfid-sensor",
+    "accelerometer-sensor",
+    "blurams-camera",
+    "plug-cameras-yi"
+  ],
+  "n_held_test": 5,
+  "training_pool_available": 21,
+  "test_flood_flows": 51083,
+  "test_benign_flows": 1528,
+  "sweep": [
+    {
+      "train_victims": 5,
+      "n_seeds": 5,
+      "auc_median": 0.998,
+      "auc_min": 0.9787,
+      "auc_max": 0.9997,
+      "fpr_median": 0.8868,
+      "seen_fpr_median": 0.0141
+    },
+    {
+      "train_victims": 8,
+      "n_seeds": 5,
+      "auc_median": 0.9972,
+      "auc_min": 0.9893,
+      "auc_max": 0.9997,
+      "fpr_median": 0.9064,
+      "seen_fpr_median": 0.0152
+    },
+    {
+      "train_victims": 12,
+      "n_seeds": 5,
+      "auc_median": 0.9996,
+      "auc_min": 0.9986,
+      "auc_max": 0.9998,
+      "fpr_median": 0.4025,
+      "seen_fpr_median": 0.0145
+    },
+    {
+      "train_victims": 16,
+      "n_seeds": 5,
+      "auc_median": 0.9997,
+      "auc_min": 0.9992,
+      "auc_max": 0.9997,
+      "fpr_median": 0.7179,
+      "seen_fpr_median": 0.0126
+    },
+    {
+      "train_victims": 20,
+      "n_seeds": 5,
+      "auc_median": 0.9999,
+      "auc_min": 0.9996,
+      "auc_max": 0.9999,
+      "fpr_median": 0.0399,
+      "seen_fpr_median": 0.0101
+    },
+    {
+      "train_victims": 21,
+      "n_seeds": 5,
+      "auc_median": 0.9997,
+      "auc_min": 0.9996,
+      "auc_max": 0.9998,
+      "fpr_median": 0.9522,
+      "seen_fpr_median": 0.0115
+    }
+  ]
+}

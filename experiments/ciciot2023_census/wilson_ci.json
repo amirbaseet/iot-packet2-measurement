@@ -1,0 +1,206 @@
+{
+  "note": "Wilson 95% score interval on device-disjoint FPR; benign_n = n_test*(1-test_attack_frac), FP = fpr*benign_n; from committed JSONs, no re-run.",
+  "families": {
+    "MITM-ArpSpoofing": [
+      {
+        "benign_n": 2836,
+        "fp": 2797,
+        "fpr": 0.9862,
+        "wilson95": [
+          0.9813,
+          0.9899
+        ],
+        "held_out_victim": "08:7c:39:ce:6e:2a",
+        "auc": 0.5988
+      },
+      {
+        "benign_n": 3436,
+        "fp": 3367,
+        "fpr": 0.9799,
+        "wilson95": [
+          0.9747,
+          0.9841
+        ],
+        "held_out_victim": "56:4f:8a:e1:f3:2d",
+        "auc": 0.2713
+      }
+    ],
+    "DNS_Spoofing": [
+      {
+        "benign_n": 6321,
+        "fp": 6321,
+        "fpr": 1.0,
+        "wilson95": [
+          0.9994,
+          1.0
+        ],
+        "held_out_victim": "24:05:88:30:6f:89",
+        "auc": 0.7101
+      },
+      {
+        "benign_n": 3442,
+        "fp": 3436,
+        "fpr": 0.9983,
+        "wilson95": [
+          0.9962,
+          0.9992
+        ],
+        "held_out_victim": "56:4f:8a:e1:f3:2d",
+        "auc": 0.4434
+      },
+      {
+        "benign_n": 4367,
+        "fp": 4366,
+        "fpr": 0.9998,
+        "wilson95": [
+          0.9987,
+          1.0
+        ],
+        "held_out_victim": "dc:a6:32:dc:27:d5",
+        "auc": 0.8048
+      }
+    ],
+    "Mirai_flood": [
+      {
+        "benign_n": 2837,
+        "fp": 1472,
+        "fpr": 0.519,
+        "wilson95": [
+          0.5005,
+          0.5372
+        ],
+        "test_victims": [
+          "08:7c:39:ce:6e:2a",
+          "1c:12:b0:9b:0c:ec"
+        ],
+        "auc": 0.8976
+      },
+      {
+        "benign_n": 5064,
+        "fp": 4565,
+        "fpr": 0.9015,
+        "wilson95": [
+          0.8929,
+          0.9094
+        ],
+        "test_victims": [
+          "08:7c:39:ce:6e:2a",
+          "1c:fe:2b:98:16:dd"
+        ],
+        "auc": 0.8685
+      },
+      {
+        "benign_n": 8076,
+        "fp": 6608,
+        "fpr": 0.8182,
+        "wilson95": [
+          0.8097,
+          0.8265
+        ],
+        "test_victims": [
+          "08:7c:39:ce:6e:2a",
+          "9c:8e:cd:1d:ab:9f"
+        ],
+        "auc": 0.7045
+      },
+      {
+        "benign_n": 6555,
+        "fp": 5558,
+        "fpr": 0.8479,
+        "wilson95": [
+          0.839,
+          0.8564
+        ],
+        "test_victims": [
+          "08:7c:39:ce:6e:2a",
+          "cc:f4:11:9c:d0:00"
+        ],
+        "auc": 0.6878
+      },
+      {
+        "benign_n": 2229,
+        "fp": 223,
+        "fpr": 0.1001,
+        "wilson95": [
+          0.0883,
+          0.1132
+        ],
+        "test_victims": [
+          "1c:12:b0:9b:0c:ec",
+          "1c:fe:2b:98:16:dd"
+        ],
+        "auc": 0.9794
+      },
+      {
+        "benign_n": 5242,
+        "fp": 5201,
+        "fpr": 0.9922,
+        "wilson95": [
+          0.9894,
+          0.9942
+        ],
+        "test_victims": [
+          "1c:12:b0:9b:0c:ec",
+          "9c:8e:cd:1d:ab:9f"
+        ],
+        "auc": 0.5053
+      },
+      {
+        "benign_n": 3719,
+        "fp": 3664,
+        "fpr": 0.9852,
+        "wilson95": [
+          0.9808,
+          0.9886
+        ],
+        "test_victims": [
+          "1c:12:b0:9b:0c:ec",
+          "cc:f4:11:9c:d0:00"
+        ],
+        "auc": 0.5128
+      },
+      {
+        "benign_n": 7473,
+        "fp": 5405,
+        "fpr": 0.7233,
+        "wilson95": [
+          0.713,
+          0.7333
+        ],
+        "test_victims": [
+          "1c:fe:2b:98:16:dd",
+          "9c:8e:cd:1d:ab:9f"
+        ],
+        "auc": 0.6393
+      },
+      {
+        "benign_n": 5950,
+        "fp": 3939,
+        "fpr": 0.6621,
+        "wilson95": [
+          0.6499,
+          0.6739
+        ],
+        "test_victims": [
+          "1c:fe:2b:98:16:dd",
+          "cc:f4:11:9c:d0:00"
+        ],
+        "auc": 0.6294
+      },
+      {
+        "benign_n": 8961,
+        "fp": 8726,
+        "fpr": 0.9738,
+        "wilson95": [
+          0.9703,
+          0.9769
+        ],
+        "test_victims": [
+          "9c:8e:cd:1d:ab:9f",
+          "cc:f4:11:9c:d0:00"
+        ],
+        "auc": 0.5313
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "note": "POSITIVE fingerprint test: predict victim DEVICE from benign packet-2 features. NOT device-disjoint (device is the label); flow split stratified by device. Identity builds the label, never a feature. Gateway MAC 28:87:ba:bd:c6:6c excluded as infrastructure.",
+  "n_devices": 8,
+  "n_benign_flows": 2420,
+  "majority_baseline_acc": 0.6116,
+  "accuracy": 0.9862,
+  "macro_ovr_auc": 0.999,
+  "per_device_ovr_auc": {
+    "min": 0.9968,
+    "median": 0.9999,
+    "max": 1.0
+  },
+  "top_features": [
+    [
+      "win2",
+      0.374
+    ],
+    [
+      "iplen1",
+      0.0929
+    ],
+    [
+      "iplen2",
+      0.0799
+    ],
+    [
+      "ttl1",
+      0.0767
+    ],
+    [
+      "win1",
+      0.0764
+    ]
+  ],
+  "gateway_excluded": [
+    "28:87:ba:bd:c6:6c"
+  ],
+  "per_device_support": {
+    "14:c9:cf:45:3e:ba": 1480,
+    "30:de:4b:e2:13:4e": 178,
+    "44:29:1e:5c:de:12": 91,
+    "7c:94:9f:84:71:7e": 190,
+    "dc:29:19:95:3a:79": 147,
+    "dc:a6:32:dc:27:d4": 149,
+    "dc:a6:32:dc:28:46": 157,
+    "e0:46:ee:21:56:18": 28
+  }
+}

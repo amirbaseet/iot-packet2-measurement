@@ -1,0 +1,261 @@
+{
+  "fanout_min_for_scanner": 10,
+  "infra_excluded": [
+    "3c:18:a0:41:c3:a0",
+    "44:bb:3b:00:39:07"
+  ],
+  "classes": {
+    "OSScan": {
+      "packets": 958051,
+      "distinct_real_src": 75,
+      "top_sources_by_fanout": [
+        {
+          "mac": "40:5d:82:35:14:c8",
+          "fanout_dsts": 156,
+          "packets": 89712
+        },
+        {
+          "mac": "1c:12:b0:9b:0c:ec",
+          "fanout_dsts": 137,
+          "packets": 22538
+        },
+        {
+          "mac": "c0:e7:bf:0a:79:d1",
+          "fanout_dsts": 105,
+          "packets": 8923
+        },
+        {
+          "mac": "2c:71:ff:05:f1:15",
+          "fanout_dsts": 86,
+          "packets": 17919
+        },
+        {
+          "mac": "dc:a6:32:dc:27:d5",
+          "fanout_dsts": 62,
+          "packets": 121011
+        },
+        {
+          "mac": "08:7c:39:ce:6e:2a",
+          "fanout_dsts": 57,
+          "packets": 8227
+        },
+        {
+          "mac": "1c:fe:2b:98:16:dd",
+          "fanout_dsts": 52,
+          "packets": 4485
+        },
+        {
+          "mac": "48:a6:b8:f9:1b:88",
+          "fanout_dsts": 46,
+          "packets": 3230
+        }
+      ],
+      "n_scanners_fanout>=10": 23,
+      "n_scanners_fanout>=50": 7,
+      "n_scanners_fanout>=100": 3,
+      "pct_packets_in_ge2_flows": 74.4
+    },
+    "PortScan": {
+      "packets": 802300,
+      "distinct_real_src": 74,
+      "top_sources_by_fanout": [
+        {
+          "mac": "1c:12:b0:9b:0c:ec",
+          "fanout_dsts": 136,
+          "packets": 20620
+        },
+        {
+          "mac": "c0:e7:bf:0a:79:d1",
+          "fanout_dsts": 94,
+          "packets": 8141
+        },
+        {
+          "mac": "56:4f:8a:e1:f3:2d",
+          "fanout_dsts": 91,
+          "packets": 7690
+        },
+        {
+          "mac": "2c:71:ff:05:f1:15",
+          "fanout_dsts": 86,
+          "packets": 15019
+        },
+        {
+          "mac": "7c:78:b2:86:0d:81",
+          "fanout_dsts": 69,
+          "packets": 11875
+        },
+        {
+          "mac": "40:5d:82:35:14:c8",
+          "fanout_dsts": 59,
+          "packets": 29448
+        },
+        {
+          "mac": "dc:a6:32:dc:27:d5",
+          "fanout_dsts": 58,
+          "packets": 143354
+        },
+        {
+          "mac": "08:7c:39:ce:6e:2a",
+          "fanout_dsts": 53,
+          "packets": 7224
+        }
+      ],
+      "n_scanners_fanout>=10": 22,
+      "n_scanners_fanout>=50": 8,
+      "n_scanners_fanout>=100": 1,
+      "pct_packets_in_ge2_flows": 63.2
+    },
+    "PingSweep": {
+      "packets": 19764,
+      "distinct_real_src": 69,
+      "top_sources_by_fanout": [
+        {
+          "mac": "dc:a6:32:dc:27:d5",
+          "fanout_dsts": 80,
+          "packets": 254
+        },
+        {
+          "mac": "1c:12:b0:9b:0c:ec",
+          "fanout_dsts": 17,
+          "packets": 527
+        },
+        {
+          "mac": "2c:71:ff:05:f1:15",
+          "fanout_dsts": 16,
+          "packets": 247
+        },
+        {
+          "mac": "1c:fe:2b:98:16:dd",
+          "fanout_dsts": 13,
+          "packets": 181
+        },
+        {
+          "mac": "56:4f:8a:e1:f3:2d",
+          "fanout_dsts": 12,
+          "packets": 595
+        },
+        {
+          "mac": "7c:78:b2:86:0d:81",
+          "fanout_dsts": 12,
+          "packets": 214
+        },
+        {
+          "mac": "c0:e7:bf:0a:79:d1",
+          "fanout_dsts": 11,
+          "packets": 196
+        },
+        {
+          "mac": "00:17:88:60:d6:4f",
+          "fanout_dsts": 11,
+          "packets": 197
+        }
+      ],
+      "n_scanners_fanout>=10": 8,
+      "n_scanners_fanout>=50": 1,
+      "n_scanners_fanout>=100": 0,
+      "pct_packets_in_ge2_flows": 92.3
+    },
+    "HostDiscovery": {
+      "packets": 1269813,
+      "distinct_real_src": 71,
+      "top_sources_by_fanout": [
+        {
+          "mac": "1c:12:b0:9b:0c:ec",
+          "fanout_dsts": 194,
+          "packets": 17364
+        },
+        {
+          "mac": "c0:e7:bf:0a:79:d1",
+          "fanout_dsts": 175,
+          "packets": 22415
+        },
+        {
+          "mac": "2c:71:ff:05:f1:15",
+          "fanout_dsts": 109,
+          "packets": 31480
+        },
+        {
+          "mac": "48:a6:b8:f9:1b:88",
+          "fanout_dsts": 90,
+          "packets": 7886
+        },
+        {
+          "mac": "56:4f:8a:e1:f3:2d",
+          "fanout_dsts": 84,
+          "packets": 8591
+        },
+        {
+          "mac": "a0:d0:dc:c4:08:ff",
+          "fanout_dsts": 80,
+          "packets": 8171
+        },
+        {
+          "mac": "1c:fe:2b:98:16:dd",
+          "fanout_dsts": 76,
+          "packets": 8524
+        },
+        {
+          "mac": "7c:78:b2:86:0d:81",
+          "fanout_dsts": 74,
+          "packets": 33884
+        }
+      ],
+      "n_scanners_fanout>=10": 27,
+      "n_scanners_fanout>=50": 10,
+      "n_scanners_fanout>=100": 3,
+      "pct_packets_in_ge2_flows": 46.3
+    },
+    "VulnerabilityScan": {
+      "packets": 3567333,
+      "distinct_real_src": 73,
+      "top_sources_by_fanout": [
+        {
+          "mac": "c0:e7:bf:0a:79:d1",
+          "fanout_dsts": 398,
+          "packets": 51866
+        },
+        {
+          "mac": "1c:12:b0:9b:0c:ec",
+          "fanout_dsts": 379,
+          "packets": 156941
+        },
+        {
+          "mac": "48:a6:b8:f9:1b:88",
+          "fanout_dsts": 229,
+          "packets": 10119
+        },
+        {
+          "mac": "2c:71:ff:05:f1:15",
+          "fanout_dsts": 219,
+          "packets": 95477
+        },
+        {
+          "mac": "1c:fe:2b:98:16:dd",
+          "fanout_dsts": 150,
+          "packets": 35099
+        },
+        {
+          "mac": "08:7c:39:ce:6e:2a",
+          "fanout_dsts": 123,
+          "packets": 61183
+        },
+        {
+          "mac": "56:4f:8a:e1:f3:2d",
+          "fanout_dsts": 107,
+          "packets": 8658
+        },
+        {
+          "mac": "e8:1b:69:f8:d6:e6",
+          "fanout_dsts": 76,
+          "packets": 6552
+        }
+      ],
+      "n_scanners_fanout>=10": 42,
+      "n_scanners_fanout>=50": 12,
+      "n_scanners_fanout>=100": 7,
+      "pct_packets_in_ge2_flows": 92.3
+    }
+  },
+  "classes_with_ge2_scanners": 5,
+  "classes_with_ge3_scanners": 5
+}

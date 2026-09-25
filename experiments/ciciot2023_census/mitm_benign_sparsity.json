@@ -1,0 +1,108 @@
+{
+  "note": "benign flows per CIC IIoT 2025 MITM victim device (real MAC from udp-frag). The IoT SENSORS are benign-sparse (4-12 each); a few chatty devices dominate -> no clean device-disjoint FPR.",
+  "per_device": {
+    "accelerometer-sensor": {
+      "mac": "08:b6:1f:82:ee:44",
+      "benign_flows": 4
+    },
+    "ap": {
+      "mac": "30:de:4b:e2:13:4e",
+      "benign_flows": 178
+    },
+    "blurams-camera": {
+      "mac": "14:c9:cf:45:3e:ba",
+      "benign_flows": 1507
+    },
+    "dekco-camera": {
+      "mac": "44:29:1e:5c:de:12",
+      "benign_flows": 91
+    },
+    "edge1": {
+      "mac": "dc:a6:32:dc:27:d4",
+      "benign_flows": 290
+    },
+    "flame-sensor": {
+      "mac": "08:b6:1f:82:ee:cc",
+      "benign_flows": 6
+    },
+    "gas-sensor": {
+      "mac": "08:b6:1f:83:25:98",
+      "benign_flows": 6
+    },
+    "geeni-camera": {
+      "mac": "dc:29:19:95:3a:79",
+      "benign_flows": 147
+    },
+    "light-sensor": {
+      "mac": "8c:aa:b5:8a:a9:b4",
+      "benign_flows": 12
+    },
+    "motion-sensor": {
+      "mac": "08:b6:1f:82:1c:3c",
+      "benign_flows": 10
+    },
+    "mqtt-broker": {
+      "mac": "dc:a6:32:dc:28:46",
+      "benign_flows": 312
+    },
+    "myq-camera": {
+      "mac": "20:50:e7:f0:0a:04",
+      "benign_flows": 7
+    },
+    "proximity-collision-sensor": {
+      "mac": "08:b6:1f:82:ef:30",
+      "benign_flows": 6
+    },
+    "rfid-sensor": {
+      "mac": "08:b6:1f:82:2b:1c",
+      "benign_flows": 10
+    },
+    "soil-sensor": {
+      "mac": "f0:08:d1:ce:cf:0c",
+      "benign_flows": 4
+    },
+    "sound-sensor": {
+      "mac": "f0:08:d1:ce:cf:c8",
+      "benign_flows": 6
+    },
+    "steam-sensor": {
+      "mac": "08:b6:1f:81:d2:cc",
+      "benign_flows": 6
+    },
+    "switch": {
+      "mac": "e0:46:ee:21:56:18",
+      "benign_flows": 52
+    },
+    "ultrasonic-sensor": {
+      "mac": "08:b6:1f:82:ee:c4",
+      "benign_flows": 6
+    },
+    "vibration-sensor": {
+      "mac": "08:b6:1f:82:27:d0",
+      "benign_flows": 6
+    },
+    "water-sensor": {
+      "mac": "08:b6:1f:84:66:78",
+      "benign_flows": 10
+    },
+    "weather-sensor": {
+      "mac": "08:b6:1f:82:12:30",
+      "benign_flows": 10
+    },
+    "wisenet-camera": {
+      "mac": "00:09:18:6d:73:b9",
+      "benign_flows": 2
+    },
+    "yi-camera": {
+      "mac": "7c:94:9f:84:71:7e",
+      "benign_flows": 190
+    }
+  },
+  "sensor_benign_range": [
+    4,
+    12
+  ],
+  "n_sensors": 14,
+  "all_device_benign_min": 2,
+  "all_device_benign_max": 1507
+}

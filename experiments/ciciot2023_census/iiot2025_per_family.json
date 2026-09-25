@@ -1,0 +1,97 @@
+{
+  "ddos": {
+    "attack_devices": 33,
+    "dual_label_devices": 33,
+    "n_attack_rows": 56692,
+    "random_auc": 0.99,
+    "random_fpr": 0.01,
+    "disjoint_auc_median": 0.983,
+    "disjoint_fpr_median": 0.008,
+    "disjoint_auc_range": [
+      0.975,
+      0.987
+    ],
+    "n_seeds": 5
+  },
+  "dos": {
+    "attack_devices": 34,
+    "dual_label_devices": 34,
+    "n_attack_rows": 57736,
+    "random_auc": 0.995,
+    "random_fpr": 0.009,
+    "disjoint_auc_median": 0.996,
+    "disjoint_fpr_median": 0.005,
+    "disjoint_auc_range": [
+      0.984,
+      0.998
+    ],
+    "n_seeds": 5
+  },
+  "recon": {
+    "attack_devices": 38,
+    "dual_label_devices": 38,
+    "n_attack_rows": 105848,
+    "random_auc": 0.974,
+    "random_fpr": 0.01,
+    "disjoint_auc_median": 0.96,
+    "disjoint_fpr_median": 0.022,
+    "disjoint_auc_range": [
+      0.948,
+      0.981
+    ],
+    "n_seeds": 5
+  },
+  "mitm": {
+    "attack_devices": 26,
+    "dual_label_devices": 26,
+    "n_attack_rows": 25490,
+    "random_auc": 0.995,
+    "random_fpr": 0.009,
+    "disjoint_auc_median": 0.989,
+    "disjoint_fpr_median": 0.065,
+    "disjoint_auc_range": [
+      0.963,
+      0.994
+    ],
+    "n_seeds": 5
+  },
+  "malware": {
+    "attack_devices": 9,
+    "dual_label_devices": 9,
+    "n_attack_rows": 24177,
+    "random_auc": 0.995,
+    "random_fpr": 0.011,
+    "disjoint_auc_median": 0.983,
+    "disjoint_fpr_median": 0.251,
+    "disjoint_auc_range": [
+      0.978,
+      0.993
+    ],
+    "n_seeds": 5
+  },
+  "bruteforce": {
+    "attack_devices": 5,
+    "dual_label_devices": 5,
+    "n_attack_rows": 6016,
+    "random_auc": 0.982,
+    "random_fpr": 0.306,
+    "disjoint_auc_median": 0.943,
+    "disjoint_fpr_median": 0.418,
+    "disjoint_auc_range": [
+      0.782,
+      0.999
+    ],
+    "n_seeds": 5
+  },
+  "web": {
+    "attack_devices": 1,
+    "dual_label_devices": 1,
+    "n_attack_rows": 9040,
+    "random_auc": 0.987,
+    "random_fpr": 0.309,
+    "disjoint_auc_median": null,
+    "disjoint_fpr_median": null,
+    "disjoint_auc_range": null,
+    "n_seeds": 0
+  }
+}

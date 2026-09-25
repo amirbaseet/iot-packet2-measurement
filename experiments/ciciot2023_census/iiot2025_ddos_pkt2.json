@@ -1,0 +1,22 @@
+{
+  "n_victim_devices": 26,
+  "attack_flows": 264494,
+  "benign_flows": 4599,
+  "random": {
+    "auc": 1.0,
+    "fpr": 0.0159
+  },
+  "victim_disjoint": {
+    "auc": [
+      0.9929,
+      0.9971,
+      0.9994
+    ],
+    "fpr": [
+      0.1846,
+      0.2262,
+      0.6145
+    ],
+    "n_seeds": 5
+  }
+}

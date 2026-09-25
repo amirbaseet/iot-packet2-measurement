@@ -1,0 +1,30 @@
+{
+  "note": "MATCHED windowed comparison: same windowed representation (combined_dataset.csv, identity dropped) as the 0.989 per-family run, restricted to udp-frag windows + benign, victim-disjoint over the udp-frag victims matched to the packet-2 run. Compare to packet-2 udp-frag AUC 0.997 / FPR median 0.226. Windowed = per-device windows (buffer a window, not packet-2 inline).",
+  "n_feature_cols": 58,
+  "udp_windows": 10018,
+  "benign_windows": 400672,
+  "udp_victims_windowed": 27,
+  "packet2_victims": 26,
+  "matched_victims": 26,
+  "random": {
+    "auc": 0.9945,
+    "fpr": 0.0095
+  },
+  "disjoint": {
+    "auc_median": 0.9727,
+    "auc_range": [
+      0.9622,
+      0.9778
+    ],
+    "fpr_median": 0.035,
+    "fpr_range": [
+      0.0138,
+      0.3753
+    ],
+    "n_seeds": 5
+  },
+  "packet2_udpfrag_reference": {
+    "auc": 0.997,
+    "fpr_median": 0.226
+  }
+}

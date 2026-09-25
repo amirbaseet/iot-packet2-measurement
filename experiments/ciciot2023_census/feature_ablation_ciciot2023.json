@@ -1,0 +1,114 @@
+{
+  "note": "device-disjoint AUC/FPR by feature mask; XGB 3.3.0 hist seed42; thr=1%FPR on seen. Masks drop TTL/window (stack) and/or source port (allocation) = device-identity fields.",
+  "masks": {
+    "all14": [],
+    "no_stack": [
+      "ttl1",
+      "ttl2",
+      "win1",
+      "win2"
+    ],
+    "no_sport": [
+      "sport"
+    ],
+    "no_identity": [
+      "ttl1",
+      "ttl2",
+      "win1",
+      "win2",
+      "sport"
+    ]
+  },
+  "families": {
+    "CICIoT2023_MITM": {
+      "all14": {
+        "random_auc": 0.992,
+        "random_fpr": 0.0212,
+        "disjoint_auc_med": 0.4351,
+        "disjoint_fpr_med": 0.9831,
+        "n_folds": 2
+      },
+      "no_stack": {
+        "random_auc": 0.9826,
+        "random_fpr": 0.0133,
+        "disjoint_auc_med": 0.4332,
+        "disjoint_fpr_med": 0.89,
+        "n_folds": 2
+      },
+      "no_sport": {
+        "random_auc": 0.9843,
+        "random_fpr": 0.0196,
+        "disjoint_auc_med": 0.3928,
+        "disjoint_fpr_med": 0.9766,
+        "n_folds": 2
+      },
+      "no_identity": {
+        "random_auc": 0.9707,
+        "random_fpr": 0.0234,
+        "disjoint_auc_med": 0.4211,
+        "disjoint_fpr_med": 0.922,
+        "n_folds": 2
+      }
+    },
+    "CICIoT2023_DNS": {
+      "all14": {
+        "random_auc": 0.9963,
+        "random_fpr": 0.0113,
+        "disjoint_auc_med": 0.7101,
+        "disjoint_fpr_med": 0.9998,
+        "n_folds": 3
+      },
+      "no_stack": {
+        "random_auc": 0.9939,
+        "random_fpr": 0.0151,
+        "disjoint_auc_med": 0.6467,
+        "disjoint_fpr_med": 0.9991,
+        "n_folds": 3
+      },
+      "no_sport": {
+        "random_auc": 0.9936,
+        "random_fpr": 0.0127,
+        "disjoint_auc_med": 0.6634,
+        "disjoint_fpr_med": 0.9997,
+        "n_folds": 3
+      },
+      "no_identity": {
+        "random_auc": 0.9907,
+        "random_fpr": 0.0184,
+        "disjoint_auc_med": 0.6494,
+        "disjoint_fpr_med": 0.9712,
+        "n_folds": 3
+      }
+    },
+    "CICIoT2023_Mirai": {
+      "all14": {
+        "random_auc": 0.9903,
+        "random_fpr": 0.0097,
+        "disjoint_auc_med": 0.6932,
+        "disjoint_fpr_med": 0.8469,
+        "n_folds": 10
+      },
+      "no_stack": {
+        "random_auc": 0.9864,
+        "random_fpr": 0.0114,
+        "disjoint_auc_med": 0.7404,
+        "disjoint_fpr_med": 0.6478,
+        "n_folds": 10
+      },
+      "no_sport": {
+        "random_auc": 0.986,
+        "random_fpr": 0.0126,
+        "disjoint_auc_med": 0.7138,
+        "disjoint_fpr_med": 0.8181,
+        "n_folds": 10
+      },
+      "no_identity": {
+        "random_auc": 0.9811,
+        "random_fpr": 0.0116,
+        "disjoint_auc_med": 0.7707,
+        "disjoint_fpr_med": 0.634,
+        "n_folds": 10
+      }
+    }
+  }
+}

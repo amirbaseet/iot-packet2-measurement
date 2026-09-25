@@ -1,0 +1,23 @@
+{
+  "note": "coverage of the SHARED benign_whole-network3 capture under the family-map's -c 400000 cap.",
+  "benign_total_packets": 2588113,
+  "cap": 400000,
+  "timestamps_monotonic": false,
+  "ordering": {
+    "back_steps": 506,
+    "max_back_delta_s": 2e-06,
+    "t_first": 1757426980.400012,
+    "t_last": 1757470180.131519,
+    "t_at_packet_400k": 1757432792.63656,
+    "elapsed_at_400k_s": 5812.237,
+    "total_duration_s": 43199.732
+  },
+  "distinct_macs_total": 65,
+  "distinct_macs_in_first_400k": 63,
+  "distinct_macs_first_seen_after_400k": 2,
+  "udp_frag_victim_macs": 26,
+  "victim_macs_in_first_400k": 26,
+  "victim_macs_first_seen_after_400k": 0,
+  "victim_macs_absent_from_benign": 0,
+  "victim_macs_after_400k_list": []
+}

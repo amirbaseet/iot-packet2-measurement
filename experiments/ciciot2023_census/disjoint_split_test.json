@@ -1,0 +1,91 @@
+{
+  "victim_definition": "dst-concentration >= 5% of class packets (VIABLE-at-5% definition)",
+  "holdout_frac": 0.3,
+  "seeds": [
+    1,
+    7,
+    42,
+    100,
+    1729
+  ],
+  "global_victim_pool_size": 18,
+  "classes_surviving_both_sides_per_seed": {
+    "1": [
+      "Backdoor_Malware",
+      "Benign",
+      "BrowserHijacking",
+      "DNS_Spoofing",
+      "DictionaryBruteForce",
+      "MITM-ArpSpoofing",
+      "Recon-OSScan",
+      "Recon-PingSweep",
+      "Recon-PortScan",
+      "SqlInjection",
+      "VulnerabilityScan"
+    ],
+    "7": [
+      "Benign",
+      "BrowserHijacking",
+      "CommandInjection",
+      "DictionaryBruteForce",
+      "Mirai-greeth_flood",
+      "Mirai-greip_flood",
+      "Mirai-udpplain",
+      "Recon-PingSweep"
+    ],
+    "42": [
+      "Benign",
+      "BrowserHijacking",
+      "CommandInjection",
+      "DNS_Spoofing",
+      "DictionaryBruteForce",
+      "MITM-ArpSpoofing",
+      "Mirai-udpplain",
+      "Recon-HostDiscovery",
+      "Recon-OSScan",
+      "Recon-PortScan"
+    ],
+    "100": [
+      "Benign",
+      "DNS_Spoofing",
+      "MITM-ArpSpoofing",
+      "Mirai-udpplain",
+      "Recon-PingSweep"
+    ],
+    "1729": [
+      "Benign",
+      "DNS_Spoofing",
+      "Mirai-greeth_flood",
+      "Mirai-greip_flood",
+      "Recon-OSScan",
+      "Recon-PingSweep",
+      "Recon-PortScan",
+      "SqlInjection",
+      "VulnerabilityScan"
+    ]
+  },
+  "surviving_all_seeds": [
+    "Benign"
+  ],
+  "fragile_or_unsplittable": [
+    "Backdoor_Malware",
+    "BrowserHijacking",
+    "CommandInjection",
+    "DNS_Spoofing",
+    "DictionaryBruteForce",
+    "MITM-ArpSpoofing",
+    "Mirai-greeth_flood",
+    "Mirai-greip_flood",
+    "Mirai-udpplain",
+    "Recon-HostDiscovery",
+    "Recon-OSScan",
+    "Recon-PingSweep",
+    "Recon-PortScan",
+    "SqlInjection",
+    "Uploading_Attack",
+    "VulnerabilityScan",
+    "XSS"
+  ],
+  "min_surviving": 5,
+  "max_surviving": 11
+}

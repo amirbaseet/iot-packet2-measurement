@@ -1,0 +1,102 @@
+{
+  "note": "CIC IIoT 2025 udp-frag-flood packet-2 victim-disjoint AUC/FPR by feature mask; XGB 3.3.0 hist seed42; thr=1%FPR on seen. no_size drops the udp-frag ATTACK channel (ip.len/frame.len) as a control: no_identity high + no_size low = attack signal, not identity.",
+  "FEATS": [
+    "ip_p",
+    "sport",
+    "dport",
+    "iplen1",
+    "iplen2",
+    "ttl1",
+    "ttl2",
+    "win1",
+    "win2",
+    "flags1",
+    "flags2",
+    "framelen1",
+    "framelen2",
+    "iat"
+  ],
+  "masks": {
+    "all14": [],
+    "no_stack": [
+      "ttl1",
+      "ttl2",
+      "win1",
+      "win2"
+    ],
+    "no_sport": [
+      "sport"
+    ],
+    "no_identity": [
+      "ttl1",
+      "ttl2",
+      "win1",
+      "win2",
+      "sport"
+    ],
+    "no_size": [
+      "iplen1",
+      "iplen2",
+      "framelen1",
+      "framelen2"
+    ]
+  },
+  "family": "CICIIoT2025_udpfrag",
+  "results": {
+    "all14": {
+      "random_auc": 1.0,
+      "random_fpr": 0.0159,
+      "disjoint_auc_med": 0.9971,
+      "disjoint_fpr_med": 0.2262,
+      "disjoint_auc_range": [
+        0.9929,
+        0.9994
+      ],
+      "n_seeds": 5
+    },
+    "no_stack": {
+      "random_auc": 0.9998,
+      "random_fpr": 0.0174,
+      "disjoint_auc_med": 0.9971,
+      "disjoint_fpr_med": 0.1609,
+      "disjoint_auc_range": [
+        0.9919,
+        0.9992
+      ],
+      "n_seeds": 5
+    },
+    "no_sport": {
+      "random_auc": 1.0,
+      "random_fpr": 0.0138,
+      "disjoint_auc_med": 0.992,
+      "disjoint_fpr_med": 0.2295,
+      "disjoint_auc_range": [
+        0.9751,
+        0.9992
+      ],
+      "n_seeds": 5
+    },
+    "no_identity": {
+      "random_auc": 0.9998,
+      "random_fpr": 0.0123,
+      "disjoint_auc_med": 0.994,
+      "disjoint_fpr_med": 0.1589,
+      "disjoint_auc_range": [
+        0.9844,
+        0.9991
+      ],
+      "n_seeds": 5
+    },
+    "no_size": {
+      "random_auc": 0.9997,
+      "random_fpr": 0.0174,
+      "disjoint_auc_med": 0.9929,
+      "disjoint_fpr_med": 0.5315,
+      "disjoint_auc_range": [
+        0.9853,
+        0.9935
+      ],
+      "n_seeds": 5
+    }
+  }
+}

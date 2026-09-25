@@ -1,0 +1,113 @@
+{
+  "victim_definition": "dst-concentration >= 5% of class packets, FULL counts (no truncation)",
+  "true_victim_pool_size": 18,
+  "per_class_victims_ge5pct": {
+    "Backdoor_Malware": 2,
+    "Benign": 3,
+    "BrowserHijacking": 4,
+    "CommandInjection": 2,
+    "DNS_Spoofing": 4,
+    "DictionaryBruteForce": 3,
+    "MITM-ArpSpoofing": 4,
+    "Mirai-greeth_flood": 2,
+    "Mirai-greip_flood": 4,
+    "Mirai-udpplain": 3,
+    "Recon-HostDiscovery": 2,
+    "Recon-OSScan": 4,
+    "Recon-PingSweep": 3,
+    "Recon-PortScan": 3,
+    "SqlInjection": 2,
+    "Uploading_Attack": 1,
+    "VulnerabilityScan": 2,
+    "XSS": 1
+  },
+  "per_class_distinct_real_dst_total": {
+    "Backdoor_Malware": 59,
+    "Benign": 71,
+    "BrowserHijacking": 65,
+    "CommandInjection": 59,
+    "DNS_Spoofing": 74,
+    "DictionaryBruteForce": 68,
+    "MITM-ArpSpoofing": 76,
+    "Mirai-greeth_flood": 65,
+    "Mirai-greip_flood": 64,
+    "Mirai-udpplain": 65,
+    "Recon-HostDiscovery": 69,
+    "Recon-OSScan": 76,
+    "Recon-PingSweep": 83,
+    "Recon-PortScan": 77,
+    "SqlInjection": 65,
+    "Uploading_Attack": 55,
+    "VulnerabilityScan": 73,
+    "XSS": 58
+  },
+  "random_worstcase": {
+    "seeds": [
+      1,
+      7,
+      42,
+      100,
+      1729
+    ],
+    "evaluable_per_seed": {
+      "1": 15,
+      "7": 8,
+      "42": 16,
+      "100": 5,
+      "1729": 9
+    },
+    "usable_per_seed": {
+      "1": 11,
+      "7": 8,
+      "42": 10,
+      "100": 5,
+      "1729": 9
+    }
+  },
+  "greedy_upperbound": {
+    "evaluable": 18,
+    "usable": 16,
+    "evaluable_classes": [
+      "Backdoor_Malware",
+      "Benign",
+      "BrowserHijacking",
+      "CommandInjection",
+      "DNS_Spoofing",
+      "DictionaryBruteForce",
+      "MITM-ArpSpoofing",
+      "Mirai-greeth_flood",
+      "Mirai-greip_flood",
+      "Mirai-udpplain",
+      "Recon-HostDiscovery",
+      "Recon-OSScan",
+      "Recon-PingSweep",
+      "Recon-PortScan",
+      "SqlInjection",
+      "Uploading_Attack",
+      "VulnerabilityScan",
+      "XSS"
+    ],
+    "usable_classes": [
+      "Backdoor_Malware",
+      "Benign",
+      "BrowserHijacking",
+      "CommandInjection",
+      "DNS_Spoofing",
+      "DictionaryBruteForce",
+      "MITM-ArpSpoofing",
+      "Mirai-greeth_flood",
+      "Mirai-greip_flood",
+      "Mirai-udpplain",
+      "Recon-HostDiscovery",
+      "Recon-OSScan",
+      "Recon-PingSweep",
+      "Recon-PortScan",
+      "SqlInjection",
+      "VulnerabilityScan"
+    ]
+  },
+  "structurally_dead_classes": [
+    "Uploading_Attack",
+    "XSS"
+  ]
+}

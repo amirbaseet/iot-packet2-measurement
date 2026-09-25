@@ -1,0 +1,559 @@
+{
+  "note": "selective prediction on unseen-device Mirai; thr=1%FPR on seen; deterministic seed=42 n_jobs=1",
+  "full": {
+    "tag": "FULL feature set",
+    "features": [
+      "ip_p",
+      "sport",
+      "dport",
+      "iplen1",
+      "iplen2",
+      "ttl1",
+      "ttl2",
+      "win1",
+      "win2",
+      "flags1",
+      "flags2",
+      "pay1",
+      "pay2",
+      "iat"
+    ],
+    "median_fpr_by_coverage": {
+      "100pct": 0.8172,
+      "90pct": 0.7999,
+      "80pct": 0.7765,
+      "70pct": 0.7434,
+      "60pct": 0.6959,
+      "50pct": 0.6369
+    },
+    "partitions": [
+      {
+        "test_victims": [
+          "08:7c:39:ce:6e:2a",
+          "1c:fe:2b:98:16:dd"
+        ],
+        "auc": 0.8797,
+        "thr": 0.719,
+        "risk_coverage": [
+          {
+            "coverage": 1.0,
+            "fpr": 0.9289,
+            "recall": 0.9878
+          },
+          {
+            "coverage": 0.9,
+            "fpr": 0.9603,
+            "recall": 0.9945
+          },
+          {
+            "coverage": 0.8,
+            "fpr": 0.9805,
+            "recall": 0.9972
+          },
+          {
+            "coverage": 0.7,
+            "fpr": 0.9801,
+            "recall": 0.9993
+          },
+          {
+            "coverage": 0.6,
+            "fpr": 0.9763,
+            "recall": 0.9993
+          },
+          {
+            "coverage": 0.5,
+            "fpr": 0.9688,
+            "recall": 0.9993
+          }
+        ],
+        "error_band_curve": {
+          "n_fp": 4704,
+          "pct_near_thr": {
+            "0.05": 5.4,
+            "0.1": 10.9,
+            "0.15": 16.6,
+            "0.2": 23.9,
+            "0.3": 100.0
+          }
+        }
+      },
+      {
+        "test_victims": [
+          "08:7c:39:ce:6e:2a",
+          "9c:8e:cd:1d:ab:9f"
+        ],
+        "auc": 0.68,
+        "thr": 0.9002,
+        "risk_coverage": [
+          {
+            "coverage": 1.0,
+            "fpr": 0.8172,
+            "recall": 0.9821
+          },
+          {
+            "coverage": 0.9,
+            "fpr": 0.7999,
+            "recall": 0.9848
+          },
+          {
+            "coverage": 0.8,
+            "fpr": 0.7765,
+            "recall": 0.9823
+          },
+          {
+            "coverage": 0.7,
+            "fpr": 0.7434,
+            "recall": 0.9806
+          },
+          {
+            "coverage": 0.6,
+            "fpr": 0.6959,
+            "recall": 0.9802
+          },
+          {
+            "coverage": 0.5,
+            "fpr": 0.6369,
+            "recall": 0.9754
+          }
+        ],
+        "error_band_curve": {
+          "n_fp": 6602,
+          "pct_near_thr": {
+            "0.05": 0.5,
+            "0.1": 100.0,
+            "0.15": 100.0,
+            "0.2": 100.0,
+            "0.3": 100.0
+          }
+        }
+      },
+      {
+        "test_victims": [
+          "1c:12:b0:9b:0c:ec",
+          "1c:fe:2b:98:16:dd"
+        ],
+        "auc": 0.974,
+        "thr": 0.8452,
+        "risk_coverage": [
+          {
+            "coverage": 1.0,
+            "fpr": 0.1198,
+            "recall": 0.949
+          },
+          {
+            "coverage": 0.9,
+            "fpr": 0.0624,
+            "recall": 0.9567
+          },
+          {
+            "coverage": 0.8,
+            "fpr": 0.0117,
+            "recall": 0.9546
+          },
+          {
+            "coverage": 0.7,
+            "fpr": 0.0023,
+            "recall": 0.9418
+          },
+          {
+            "coverage": 0.6,
+            "fpr": 0.0006,
+            "recall": 0.8937
+          },
+          {
+            "coverage": 0.5,
+            "fpr": 0.0,
+            "recall": 0.3867
+          }
+        ],
+        "error_band_curve": {
+          "n_fp": 267,
+          "pct_near_thr": {
+            "0.05": 33.3,
+            "0.1": 63.7,
+            "0.15": 99.6,
+            "0.2": 100.0,
+            "0.3": 100.0
+          }
+        }
+      },
+      {
+        "test_victims": [
+          "1c:fe:2b:98:16:dd",
+          "cc:f4:11:9c:d0:00"
+        ],
+        "auc": 0.7132,
+        "thr": 0.8943,
+        "risk_coverage": [
+          {
+            "coverage": 1.0,
+            "fpr": 0.6863,
+            "recall": 0.9697
+          },
+          {
+            "coverage": 0.9,
+            "fpr": 0.6972,
+            "recall": 0.9773
+          },
+          {
+            "coverage": 0.8,
+            "fpr": 0.6739,
+            "recall": 0.9754
+          },
+          {
+            "coverage": 0.7,
+            "fpr": 0.6269,
+            "recall": 0.9719
+          },
+          {
+            "coverage": 0.6,
+            "fpr": 0.5569,
+            "recall": 0.969
+          },
+          {
+            "coverage": 0.5,
+            "fpr": 0.4771,
+            "recall": 0.9614
+          }
+        ],
+        "error_band_curve": {
+          "n_fp": 4083,
+          "pct_near_thr": {
+            "0.05": 6.5,
+            "0.1": 28.9,
+            "0.15": 100.0,
+            "0.2": 100.0,
+            "0.3": 100.0
+          }
+        }
+      },
+      {
+        "test_victims": [
+          "9c:8e:cd:1d:ab:9f",
+          "cc:f4:11:9c:d0:00"
+        ],
+        "auc": 0.5474,
+        "thr": 0.9721,
+        "risk_coverage": [
+          {
+            "coverage": 1.0,
+            "fpr": 0.9733,
+            "recall": 0.9686
+          },
+          {
+            "coverage": 0.9,
+            "fpr": 0.9742,
+            "recall": 0.9764
+          },
+          {
+            "coverage": 0.8,
+            "fpr": 0.9725,
+            "recall": 0.9739
+          },
+          {
+            "coverage": 0.7,
+            "fpr": 0.9688,
+            "recall": 0.9712
+          },
+          {
+            "coverage": 0.6,
+            "fpr": 0.9637,
+            "recall": 0.9665
+          },
+          {
+            "coverage": 0.5,
+            "fpr": 0.957,
+            "recall": 0.9577
+          }
+        ],
+        "error_band_curve": {
+          "n_fp": 8725,
+          "pct_near_thr": {
+            "0.05": 100.0,
+            "0.1": 100.0,
+            "0.15": 100.0,
+            "0.2": 100.0,
+            "0.3": 100.0
+          }
+        }
+      }
+    ]
+  },
+  "ports_dropped": {
+    "tag": "PORTS-DROPPED ablation",
+    "features": [
+      "ip_p",
+      "iplen1",
+      "iplen2",
+      "ttl1",
+      "ttl2",
+      "win1",
+      "win2",
+      "flags1",
+      "flags2",
+      "pay1",
+      "pay2",
+      "iat"
+    ],
+    "median_fpr_by_coverage": {
+      "100pct": 0.7526,
+      "90pct": 0.7951,
+      "80pct": 0.7728,
+      "70pct": 0.7374,
+      "60pct": 0.6876,
+      "50pct": 0.6168
+    },
+    "partitions": [
+      {
+        "test_victims": [
+          "08:7c:39:ce:6e:2a",
+          "1c:fe:2b:98:16:dd"
+        ],
+        "auc": 0.8875,
+        "thr": 0.81,
+        "risk_coverage": [
+          {
+            "coverage": 1.0,
+            "fpr": 0.7526,
+            "recall": 0.9823
+          },
+          {
+            "coverage": 0.9,
+            "fpr": 0.7986,
+            "recall": 0.9856
+          },
+          {
+            "coverage": 0.8,
+            "fpr": 0.8279,
+            "recall": 0.9874
+          },
+          {
+            "coverage": 0.7,
+            "fpr": 0.8596,
+            "recall": 0.9893
+          },
+          {
+            "coverage": 0.6,
+            "fpr": 0.8257,
+            "recall": 0.9891
+          },
+          {
+            "coverage": 0.5,
+            "fpr": 0.7814,
+            "recall": 0.9891
+          }
+        ],
+        "error_band_curve": {
+          "n_fp": 3811,
+          "pct_near_thr": {
+            "0.05": 7.7,
+            "0.1": 17.5,
+            "0.15": 30.9,
+            "0.2": 100.0,
+            "0.3": 100.0
+          }
+        }
+      },
+      {
+        "test_victims": [
+          "08:7c:39:ce:6e:2a",
+          "9c:8e:cd:1d:ab:9f"
+        ],
+        "auc": 0.7244,
+        "thr": 0.9266,
+        "risk_coverage": [
+          {
+            "coverage": 1.0,
+            "fpr": 0.8143,
+            "recall": 0.9698
+          },
+          {
+            "coverage": 0.9,
+            "fpr": 0.7951,
+            "recall": 0.9799
+          },
+          {
+            "coverage": 0.8,
+            "fpr": 0.7728,
+            "recall": 0.9748
+          },
+          {
+            "coverage": 0.7,
+            "fpr": 0.7374,
+            "recall": 0.974
+          },
+          {
+            "coverage": 0.6,
+            "fpr": 0.6876,
+            "recall": 0.974
+          },
+          {
+            "coverage": 0.5,
+            "fpr": 0.6168,
+            "recall": 0.973
+          }
+        ],
+        "error_band_curve": {
+          "n_fp": 6579,
+          "pct_near_thr": {
+            "0.05": 7.1,
+            "0.1": 100.0,
+            "0.15": 100.0,
+            "0.2": 100.0,
+            "0.3": 100.0
+          }
+        }
+      },
+      {
+        "test_victims": [
+          "1c:12:b0:9b:0c:ec",
+          "1c:fe:2b:98:16:dd"
+        ],
+        "auc": 0.9802,
+        "thr": 0.8757,
+        "risk_coverage": [
+          {
+            "coverage": 1.0,
+            "fpr": 0.0206,
+            "recall": 0.94
+          },
+          {
+            "coverage": 0.9,
+            "fpr": 0.0077,
+            "recall": 0.9503
+          },
+          {
+            "coverage": 0.8,
+            "fpr": 0.0021,
+            "recall": 0.9432
+          },
+          {
+            "coverage": 0.7,
+            "fpr": 0.0005,
+            "recall": 0.9212
+          },
+          {
+            "coverage": 0.6,
+            "fpr": 0.0,
+            "recall": 0.8372
+          },
+          {
+            "coverage": 0.5,
+            "fpr": 0.0,
+            "recall": 0.0
+          }
+        ],
+        "error_band_curve": {
+          "n_fp": 46,
+          "pct_near_thr": {
+            "0.05": 54.3,
+            "0.1": 82.6,
+            "0.15": 100.0,
+            "0.2": 100.0,
+            "0.3": 100.0
+          }
+        }
+      },
+      {
+        "test_victims": [
+          "1c:fe:2b:98:16:dd",
+          "cc:f4:11:9c:d0:00"
+        ],
+        "auc": 0.793,
+        "thr": 0.8815,
+        "risk_coverage": [
+          {
+            "coverage": 1.0,
+            "fpr": 0.6425,
+            "recall": 0.9719
+          },
+          {
+            "coverage": 0.9,
+            "fpr": 0.6536,
+            "recall": 0.9794
+          },
+          {
+            "coverage": 0.8,
+            "fpr": 0.618,
+            "recall": 0.9774
+          },
+          {
+            "coverage": 0.7,
+            "fpr": 0.5589,
+            "recall": 0.9752
+          },
+          {
+            "coverage": 0.6,
+            "fpr": 0.4829,
+            "recall": 0.9715
+          },
+          {
+            "coverage": 0.5,
+            "fpr": 0.3749,
+            "recall": 0.9665
+          }
+        ],
+        "error_band_curve": {
+          "n_fp": 3822,
+          "pct_near_thr": {
+            "0.05": 5.6,
+            "0.1": 20.9,
+            "0.15": 100.0,
+            "0.2": 100.0,
+            "0.3": 100.0
+          }
+        }
+      },
+      {
+        "test_victims": [
+          "9c:8e:cd:1d:ab:9f",
+          "cc:f4:11:9c:d0:00"
+        ],
+        "auc": 0.571,
+        "thr": 0.9697,
+        "risk_coverage": [
+          {
+            "coverage": 1.0,
+            "fpr": 0.9738,
+            "recall": 0.9742
+          },
+          {
+            "coverage": 0.9,
+            "fpr": 0.9873,
+            "recall": 0.9876
+          },
+          {
+            "coverage": 0.8,
+            "fpr": 0.9856,
+            "recall": 0.9871
+          },
+          {
+            "coverage": 0.7,
+            "fpr": 0.9848,
+            "recall": 0.9865
+          },
+          {
+            "coverage": 0.6,
+            "fpr": 0.9823,
+            "recall": 0.9841
+          },
+          {
+            "coverage": 0.5,
+            "fpr": 0.9791,
+            "recall": 0.9785
+          }
+        ],
+        "error_band_curve": {
+          "n_fp": 8729,
+          "pct_near_thr": {
+            "0.05": 100.0,
+            "0.1": 100.0,
+            "0.15": 100.0,
+            "0.2": 100.0,
+            "0.3": 100.0
+          }
+        }
+      }
+    ]
+  }
+}

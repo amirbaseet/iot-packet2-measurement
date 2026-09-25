@@ -1,0 +1,57 @@
+{
+  "note": "POSITIVE fingerprint test on CICIoT2023: predict source DEVICE from benign packet-2 features. NOT device-disjoint (device is the label); flow split stratified by device; identity builds the label, never a feature. Two dominant gateway/router MACs excluded as infrastructure.",
+  "dataset": "CICIoT2023",
+  "FEATS": [
+    "ip_p",
+    "sport",
+    "dport",
+    "iplen1",
+    "iplen2",
+    "ttl1",
+    "ttl2",
+    "win1",
+    "win2",
+    "flags1",
+    "flags2",
+    "pay1",
+    "pay2",
+    "iat"
+  ],
+  "n_devices": 43,
+  "n_benign_flows": 52036,
+  "majority_baseline_acc": 0.0577,
+  "accuracy": 0.9251,
+  "macro_ovr_auc": 0.998,
+  "per_device_ovr_auc": {
+    "min": 0.9838,
+    "median": 0.9996,
+    "max": 1.0
+  },
+  "top_features": [
+    [
+      "win2",
+      0.1734
+    ],
+    [
+      "win1",
+      0.1483
+    ],
+    [
+      "ttl1",
+      0.1411
+    ],
+    [
+      "flags1",
+      0.1343
+    ],
+    [
+      "iplen1",
+      0.0994
+    ]
+  ],
+  "gateway_excluded": [
+    "3c:18:a0:41:c3:a0",
+    "40:5d:82:35:14:c8"
+  ],
+  "perdev_cap": 3000
+}

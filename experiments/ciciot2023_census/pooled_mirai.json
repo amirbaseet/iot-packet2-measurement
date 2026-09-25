@@ -1,0 +1,27 @@
+{
+  "pooled_victims": 6,
+  "c23_victims": 5,
+  "i25_victims": 1,
+  "origin_control_auc_benign": 0.9947,
+  "random": {
+    "auc": 0.9902,
+    "fpr": 0.0086
+  },
+  "pooled_disjoint_auc": [
+    0.8262,
+    0.946,
+    0.9901
+  ],
+  "pooled_disjoint_fpr": [
+    0.0184,
+    0.103,
+    0.4845
+  ],
+  "held_mix_per_seed": [
+    "2c23+0i25",
+    "1c23+1i25",
+    "2c23+0i25",
+    "2c23+0i25",
+    "2c23+0i25"
+  ]
+}

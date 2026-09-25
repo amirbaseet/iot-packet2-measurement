@@ -1,0 +1,7 @@
+{
+  "note": "DataSense windowed native window = max(timestamp_end - timestamp_start) over all combined_dataset.csv rows",
+  "window_seconds": 10.0,
+  "n_rows": 685671,
+  "n_rows_at_max_10s": 30030,
+  "median_delta_s": 3.0
+}

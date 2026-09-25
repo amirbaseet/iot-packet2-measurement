@@ -1,0 +1,198 @@
+{
+  "scanner_fanout_threshold": 50,
+  "note": "attack=scanner-src flows; benign device-matched random-split; thr=1%FPR seen; seed42 n_jobs1",
+  "full": {
+    "OSScan": {
+      "n_scanners": 7,
+      "n_attack_flows": 3877,
+      "random": {
+        "auc": 0.9676,
+        "recall": 0.7644,
+        "fpr": 0.0099
+      },
+      "attacker_disjoint": {
+        "auc_range": [
+          0.5752,
+          0.8147
+        ],
+        "auc_median": 0.6649,
+        "fpr_range": [
+          0.0203,
+          0.1548
+        ],
+        "fpr_median": 0.096,
+        "recall_median": 0.2657,
+        "n_partitions": 7
+      }
+    },
+    "PortScan": {
+      "n_scanners": 8,
+      "n_attack_flows": 2912,
+      "random": {
+        "auc": 0.9783,
+        "recall": 0.7872,
+        "fpr": 0.0086
+      },
+      "attacker_disjoint": {
+        "auc_range": [
+          0.7056,
+          0.9387
+        ],
+        "auc_median": 0.8227,
+        "fpr_range": [
+          0.0032,
+          0.3666
+        ],
+        "fpr_median": 0.0533,
+        "recall_median": 0.4478,
+        "n_partitions": 7
+      }
+    },
+    "PingSweep": {
+      "skip": "<2 scanners"
+    },
+    "HostDiscovery": {
+      "n_scanners": 10,
+      "n_attack_flows": 9273,
+      "random": {
+        "auc": 0.9891,
+        "recall": 0.8318,
+        "fpr": 0.0097
+      },
+      "attacker_disjoint": {
+        "auc_range": [
+          0.6388,
+          0.8541
+        ],
+        "auc_median": 0.7628,
+        "fpr_range": [
+          0.011,
+          0.3851
+        ],
+        "fpr_median": 0.1198,
+        "recall_median": 0.2484,
+        "n_partitions": 8
+      }
+    },
+    "VulnerabilityScan": {
+      "n_scanners": 12,
+      "n_attack_flows": 21449,
+      "random": {
+        "auc": 0.9692,
+        "recall": 0.7167,
+        "fpr": 0.012
+      },
+      "attacker_disjoint": {
+        "auc_range": [
+          0.6236,
+          0.8055
+        ],
+        "auc_median": 0.7542,
+        "fpr_range": [
+          0.058,
+          0.3074
+        ],
+        "fpr_median": 0.1298,
+        "recall_median": 0.1413,
+        "n_partitions": 8
+      }
+    }
+  },
+  "ports_dropped": {
+    "OSScan": {
+      "n_scanners": 7,
+      "n_attack_flows": 3877,
+      "random": {
+        "auc": 0.9577,
+        "recall": 0.7291,
+        "fpr": 0.01
+      },
+      "attacker_disjoint": {
+        "auc_range": [
+          0.5107,
+          0.8817
+        ],
+        "auc_median": 0.5211,
+        "fpr_range": [
+          0.0008,
+          0.0194
+        ],
+        "fpr_median": 0.0141,
+        "recall_median": 0.0989,
+        "n_partitions": 7
+      }
+    },
+    "PortScan": {
+      "n_scanners": 8,
+      "n_attack_flows": 2912,
+      "random": {
+        "auc": 0.9663,
+        "recall": 0.6785,
+        "fpr": 0.0101
+      },
+      "attacker_disjoint": {
+        "auc_range": [
+          0.5475,
+          0.9073
+        ],
+        "auc_median": 0.8158,
+        "fpr_range": [
+          0.0032,
+          0.3555
+        ],
+        "fpr_median": 0.036,
+        "recall_median": 0.3399,
+        "n_partitions": 7
+      }
+    },
+    "PingSweep": {
+      "skip": "<2 scanners"
+    },
+    "HostDiscovery": {
+      "n_scanners": 10,
+      "n_attack_flows": 9273,
+      "random": {
+        "auc": 0.9799,
+        "recall": 0.7545,
+        "fpr": 0.009
+      },
+      "attacker_disjoint": {
+        "auc_range": [
+          0.5944,
+          0.9057
+        ],
+        "auc_median": 0.7704,
+        "fpr_range": [
+          0.0229,
+          0.3851
+        ],
+        "fpr_median": 0.0691,
+        "recall_median": 0.2729,
+        "n_partitions": 8
+      }
+    },
+    "VulnerabilityScan": {
+      "n_scanners": 12,
+      "n_attack_flows": 21449,
+      "random": {
+        "auc": 0.9518,
+        "recall": 0.6427,
+        "fpr": 0.0107
+      },
+      "attacker_disjoint": {
+        "auc_range": [
+          0.6729,
+          0.8033
+        ],
+        "auc_median": 0.7605,
+        "fpr_range": [
+          0.0047,
+          0.239
+        ],
+        "fpr_median": 0.0938,
+        "recall_median": 0.2373,
+        "n_partitions": 8
+      }
+    }
+  }
+}

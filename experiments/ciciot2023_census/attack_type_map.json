@@ -1,0 +1,57 @@
+{
+  "title": "CICIoT2023 — early-detectability map: which attack types are learnable-early, on which axis, and does the data support the honest test",
+  "basis": "packet-2 behavioural features (no MAC/IP as features); device identity only builds the split; XGBoost seed42 n_jobs1; threshold=1% FPR on seen; multi-partition sweep; TRUE device holdout (attack+benign of the held device in test only).",
+  "categories": [
+    {
+      "category": "victim-concentrated floods",
+      "classes": ["Mirai-greeth_flood", "Mirai-greip_flood", "Mirai-udpplain"],
+      "honest_frame": "victim-disjoint (train on some victim devices, test on unseen victims)",
+      "data_supports_frame": true,
+      "result": "FAILS to transfer. Seen-device AUC 0.99 / FPR 1% -> unseen-device AUC median 0.66 (3/10 partitions at chance), FPR 10-99% (median 83%). Flat across packet-2/20/full-flow (fingerprinting, not earliness).",
+      "verdict": "fingerprints the victim"
+    },
+    {
+      "category": "multi-host reconnaissance / scanning",
+      "classes": ["Recon-OSScan", "Recon-PortScan", "Recon-HostDiscovery", "VulnerabilityScan", "Recon-PingSweep"],
+      "honest_frame": "attacker-disjoint (train on some scanner sources, test on unseen scanners)",
+      "data_supports_frame": true,
+      "note": "scanners identified by fan-out (>=50 distinct dst IPs), not distinct src (avoids counting responders). PingSweep skipped (<2 scanners at fanout>=50). HostDiscovery is 46% single-packet (packet-2 thin).",
+      "result": "PARTIALLY transfers. Seen AUC 0.97-0.99 / FPR 1% -> unseen-scanner AUC 0.67-0.82 (PortScan 0.82, HostDiscovery 0.76, VulnScan 0.75, OSScan 0.66), FPR 5-13%. Ports carry scan signal (OSScan -> chance 0.52 without ports; others hold).",
+      "verdict": "partially generalizes to unseen scanners (far better than floods, still degraded)"
+    },
+    {
+      "category": "service/server-targeted web attacks",
+      "classes": ["SqlInjection", "XSS", "CommandInjection", "BrowserHijacking", "Uploading_Attack", "Backdoor_Malware"],
+      "honest_frame": "host/service-disjoint (train on some target hosts, test on unseen hosts)",
+      "data_supports_frame": false,
+      "note": "each concentrates on a single target host (0-1 non-infra victim at 5%), so a host-disjoint split is structurally impossible. BrowserHijacking is the one exception (3 Raspberry-Pi camera hosts) but they are near-identical device types.",
+      "result": "UNTESTABLE for generalization on this data (single target). That the data cannot support the honest test is itself a finding.",
+      "verdict": "not measurable here (single target per class)"
+    },
+    {
+      "category": "attacker-driven MITM / spoofing",
+      "classes": ["MITM-ArpSpoofing", "DNS_Spoofing"],
+      "honest_frame": "attacker-disjoint / behaviour-signature (victim identity is secondary; the attacker inserts itself)",
+      "data_supports_frame": "unknown (not yet censused on the attacker/fan-out axis)",
+      "note": "the dst-victim counts (3 each) are the WRONG axis for this category; needs an attacker/behaviour census like recon before a test.",
+      "result": "not yet run",
+      "verdict": "deferred (needs an attacker-axis census)"
+    },
+    {
+      "category": "brute force",
+      "classes": ["DictionaryBruteForce"],
+      "honest_frame": "host/service-disjoint",
+      "data_supports_frame": false,
+      "note": "2 target hosts at 5% (bare minimum, 1 train / 1 test) - as fragile as greeth.",
+      "result": "not run (too thin to be meaningful alone)",
+      "verdict": "too thin"
+    }
+  ],
+  "headline": "The packet-2 fingerprinting limit is ATTACK-TYPE-DEPENDENT, not universal. Floods fingerprint the victim and fail to transfer (AUC 0.66, FPR 10-99%). Recon/scans partially transfer to unseen scanners (AUC 0.67-0.82, FPR 5-13%). Web/brute attacks are single-target so the honest test is not even constructible on this data (a dataset-limitation finding). MITM/spoofing need an attacker-axis census not yet done.",
+  "caveats": [
+    "One dataset (CICIoT2023), one model class (XGBoost), packet-2 features, TCP/UDP only.",
+    "Small, overlapping device pools (~16 victims, 13 scanners) - fragile splits, reported as ranges over partitions.",
+    "identity-fingerprint vs device-type shift cannot be fully separated without device-type labels.",
+    "recon per-file labels include benign background; attack flows restricted to scanner-source flows to reduce it."
+  ]
+}

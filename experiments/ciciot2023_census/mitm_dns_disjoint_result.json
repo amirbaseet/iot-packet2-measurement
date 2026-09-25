@@ -1,0 +1,146 @@
+{
+  "features": [
+    "ip_p",
+    "sport",
+    "dport",
+    "iplen1",
+    "iplen2",
+    "ttl1",
+    "ttl2",
+    "win1",
+    "win2",
+    "flags1",
+    "flags2",
+    "pay1",
+    "pay2",
+    "iat"
+  ],
+  "note": "leave-one-victim-out; threshold = 1% FPR on held-out SEEN(training) devices; victims = census victims_5pct_by_class; XGBoost n_jobs=1 random_state=42",
+  "n_victims_per_class": 3,
+  "results": {
+    "MITM-ArpSpoofing": {
+      "victims": [
+        "08:7c:39:ce:6e:2a",
+        "56:4f:8a:e1:f3:2d",
+        "94:39:e5:5d:27:a6"
+      ],
+      "attack_testable_per_victim": {
+        "08:7c:39:ce:6e:2a": 606,
+        "56:4f:8a:e1:f3:2d": 4477,
+        "94:39:e5:5d:27:a6": 2364
+      },
+      "attack_always_train": 28589,
+      "random": {
+        "auc": 0.992,
+        "recall_at_thr": 0.9372,
+        "fpr_at_thr": 0.0212,
+        "fpr_calib_seen": 0.0103,
+        "precision_at_thr": 0.9961,
+        "n_train": 29617,
+        "n_test": 12694,
+        "test_attack_frac": 0.852,
+        "train_attack_frac": 0.852,
+        "thr": 0.8976728916168213
+      },
+      "leave_one_victim_out": [
+        {
+          "auc": 0.5988,
+          "recall_at_thr": 0.9983,
+          "fpr_at_thr": 0.9862,
+          "fpr_calib_seen": 0.0102,
+          "precision_at_thr": 0.1778,
+          "n_train": 38869,
+          "n_test": 3442,
+          "test_attack_frac": 0.176,
+          "train_attack_frac": 0.912,
+          "thr": 0.7564712762832642,
+          "held_out_victim": "08:7c:39:ce:6e:2a",
+          "calibrated": true
+        },
+        {
+          "auc": 0.2713,
+          "recall_at_thr": 0.8709,
+          "fpr_at_thr": 0.9799,
+          "fpr_calib_seen": 0.0106,
+          "precision_at_thr": 0.5364,
+          "n_train": 34395,
+          "n_test": 7916,
+          "test_attack_frac": 0.566,
+          "train_attack_frac": 0.918,
+          "thr": 0.9581460952758789,
+          "held_out_victim": "56:4f:8a:e1:f3:2d",
+          "calibrated": true
+        }
+      ]
+    },
+    "DNS_Spoofing": {
+      "victims": [
+        "24:05:88:30:6f:89",
+        "56:4f:8a:e1:f3:2d",
+        "dc:a6:32:dc:27:d5"
+      ],
+      "attack_testable_per_victim": {
+        "24:05:88:30:6f:89": 420,
+        "56:4f:8a:e1:f3:2d": 11333,
+        "dc:a6:32:dc:27:d5": 5009
+      },
+      "attack_always_train": 21243,
+      "random": {
+        "auc": 0.9963,
+        "recall_at_thr": 0.9676,
+        "fpr_at_thr": 0.0113,
+        "fpr_calib_seen": 0.0101,
+        "precision_at_thr": 0.9957,
+        "n_train": 36488,
+        "n_test": 15638,
+        "test_attack_frac": 0.729,
+        "train_attack_frac": 0.729,
+        "thr": 0.743966281414032
+      },
+      "leave_one_victim_out": [
+        {
+          "auc": 0.7101,
+          "recall_at_thr": 1.0,
+          "fpr_at_thr": 1.0,
+          "fpr_calib_seen": 0.0102,
+          "precision_at_thr": 0.0623,
+          "n_train": 45387,
+          "n_test": 6739,
+          "test_attack_frac": 0.062,
+          "train_attack_frac": 0.828,
+          "thr": 0.6007995009422302,
+          "held_out_victim": "24:05:88:30:6f:89",
+          "calibrated": true
+        },
+        {
+          "auc": 0.4434,
+          "recall_at_thr": 0.9992,
+          "fpr_at_thr": 0.9983,
+          "fpr_calib_seen": 0.0103,
+          "precision_at_thr": 0.7674,
+          "n_train": 37354,
+          "n_test": 14772,
+          "test_attack_frac": 0.767,
+          "train_attack_frac": 0.714,
+          "thr": 0.6085194945335388,
+          "held_out_victim": "56:4f:8a:e1:f3:2d",
+          "calibrated": true
+        },
+        {
+          "auc": 0.8048,
+          "recall_at_thr": 0.9872,
+          "fpr_at_thr": 0.9998,
+          "fpr_calib_seen": 0.0102,
+          "precision_at_thr": 0.5313,
+          "n_train": 42754,
+          "n_test": 9372,
+          "test_attack_frac": 0.534,
+          "train_attack_frac": 0.772,
+          "thr": 0.7165537476539612,
+          "held_out_victim": "dc:a6:32:dc:27:d5",
+          "calibrated": true
+        }
+      ]
+    }
+  }
+}

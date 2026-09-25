@@ -1,0 +1,21 @@
+# Datasets, captures, models, caches — NEVER commit (license-bound / bulk / derived)
+*.pcap
+*.pcapng
+*.csv
+*.zip
+*.tar
+*.tar.*
+*.onnx
+*.pkl
+*.parquet
+*_cache.json
+# credentials / env
+.env
+*.pem
+*.key
+# python
+__pycache__/
+venv/
+*.pyc
+# OS
+.DS_Store

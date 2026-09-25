@@ -1,0 +1,94 @@
+[
+  {
+    "family": "web",
+    "n_victim_devices": 1,
+    "attack_flows": 40485,
+    "benign_flows": 1579,
+    "random_auc": 0.9995,
+    "random_fpr": 0.0127,
+    "disjoint_auc": null,
+    "disjoint_fpr": null,
+    "n_seeds": 0,
+    "note": ""
+  },
+  {
+    "family": "bruteforce",
+    "n_victim_devices": 5,
+    "attack_flows": 2141,
+    "benign_flows": 1579,
+    "random_auc": 0.9959,
+    "random_fpr": 0.0105,
+    "disjoint_auc": [
+      0.6372,
+      0.7397,
+      0.8558
+    ],
+    "disjoint_fpr": [
+      0.2832,
+      0.6808,
+      0.9033
+    ],
+    "n_seeds": 5,
+    "note": ""
+  },
+  {
+    "family": "dos_syn80",
+    "n_victim_devices": 14,
+    "attack_flows": 1133157,
+    "benign_flows": 1579,
+    "random_auc": 1.0,
+    "random_fpr": 0.0127,
+    "disjoint_auc": [
+      0.987,
+      0.9992,
+      1.0
+    ],
+    "disjoint_fpr": [
+      0.0,
+      0.3483,
+      0.902
+    ],
+    "n_seeds": 5,
+    "note": ""
+  },
+  {
+    "family": "recon",
+    "n_victim_devices": 39,
+    "attack_flows": 64149,
+    "benign_flows": 1579,
+    "random_auc": 0.9968,
+    "random_fpr": 0.0063,
+    "disjoint_auc": [
+      0.4075,
+      0.938,
+      0.959
+    ],
+    "disjoint_fpr": [
+      0.1491,
+      0.3182,
+      0.8898
+    ],
+    "n_seeds": 5,
+    "note": "victim-disjoint frame; for recon the honest axis is attacker-disjoint"
+  },
+  {
+    "family": "mitm",
+    "n_victim_devices": 16,
+    "attack_flows": 5229,
+    "benign_flows": 1579,
+    "random_auc": 0.9847,
+    "random_fpr": 0.038,
+    "disjoint_auc": [
+      0.4033,
+      0.5293,
+      0.6788
+    ],
+    "disjoint_fpr": [
+      0.2168,
+      0.912,
+      0.9596
+    ],
+    "n_seeds": 5,
+    "note": ""
+  }
+]

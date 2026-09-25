@@ -1,0 +1,216 @@
+{
+  "correction": "infra filter restored (>80% meaningful-appearance excluded); sensitivity curve; attack-only bar",
+  "n_classes": 18,
+  "n_attack_classes": 17,
+  "infrastructure_excluded": [
+    "3c:18:a0:41:c3:a0",
+    "44:bb:3b:00:39:07"
+  ],
+  "infra_appearance": {
+    "3c:18:a0:41:c3:a0": 17,
+    "44:bb:3b:00:39:07": 15
+  },
+  "sensitivity_curve": {
+    "1pct": {
+      "attack_classes_ge3_victims": 16,
+      "all_classes_ge3_victims": 17,
+      "verdict_attack_bar": "VIABLE",
+      "per_class_victim_counts": {
+        "Backdoor_Malware": 12,
+        "Benign": 5,
+        "BrowserHijacking": 9,
+        "CommandInjection": 11,
+        "DNS_Spoofing": 12,
+        "DictionaryBruteForce": 14,
+        "MITM-ArpSpoofing": 9,
+        "Mirai-greeth_flood": 2,
+        "Mirai-greip_flood": 4,
+        "Mirai-udpplain": 3,
+        "Recon-HostDiscovery": 13,
+        "Recon-OSScan": 9,
+        "Recon-PingSweep": 8,
+        "Recon-PortScan": 11,
+        "SqlInjection": 10,
+        "Uploading_Attack": 15,
+        "VulnerabilityScan": 9,
+        "XSS": 14
+      }
+    },
+    "2pct": {
+      "attack_classes_ge3_victims": 16,
+      "all_classes_ge3_victims": 17,
+      "verdict_attack_bar": "VIABLE",
+      "per_class_victim_counts": {
+        "Backdoor_Malware": 6,
+        "Benign": 4,
+        "BrowserHijacking": 6,
+        "CommandInjection": 5,
+        "DNS_Spoofing": 7,
+        "DictionaryBruteForce": 5,
+        "MITM-ArpSpoofing": 5,
+        "Mirai-greeth_flood": 2,
+        "Mirai-greip_flood": 4,
+        "Mirai-udpplain": 3,
+        "Recon-HostDiscovery": 3,
+        "Recon-OSScan": 7,
+        "Recon-PingSweep": 7,
+        "Recon-PortScan": 7,
+        "SqlInjection": 4,
+        "Uploading_Attack": 8,
+        "VulnerabilityScan": 6,
+        "XSS": 7
+      }
+    },
+    "5pct": {
+      "attack_classes_ge3_victims": 6,
+      "all_classes_ge3_victims": 6,
+      "verdict_attack_bar": "NOT_VIABLE",
+      "per_class_victim_counts": {
+        "Backdoor_Malware": 1,
+        "Benign": 1,
+        "BrowserHijacking": 3,
+        "CommandInjection": 1,
+        "DNS_Spoofing": 3,
+        "DictionaryBruteForce": 2,
+        "MITM-ArpSpoofing": 3,
+        "Mirai-greeth_flood": 2,
+        "Mirai-greip_flood": 4,
+        "Mirai-udpplain": 3,
+        "Recon-HostDiscovery": 1,
+        "Recon-OSScan": 3,
+        "Recon-PingSweep": 2,
+        "Recon-PortScan": 2,
+        "SqlInjection": 1,
+        "Uploading_Attack": 0,
+        "VulnerabilityScan": 1,
+        "XSS": 0
+      }
+    },
+    "10pct": {
+      "attack_classes_ge3_victims": 1,
+      "all_classes_ge3_victims": 1,
+      "verdict_attack_bar": "NOT_VIABLE",
+      "per_class_victim_counts": {
+        "Backdoor_Malware": 0,
+        "Benign": 1,
+        "BrowserHijacking": 0,
+        "CommandInjection": 1,
+        "DNS_Spoofing": 1,
+        "DictionaryBruteForce": 1,
+        "MITM-ArpSpoofing": 1,
+        "Mirai-greeth_flood": 2,
+        "Mirai-greip_flood": 4,
+        "Mirai-udpplain": 2,
+        "Recon-HostDiscovery": 1,
+        "Recon-OSScan": 1,
+        "Recon-PingSweep": 0,
+        "Recon-PortScan": 1,
+        "SqlInjection": 1,
+        "Uploading_Attack": 0,
+        "VulnerabilityScan": 1,
+        "XSS": 0
+      }
+    },
+    "20pct": {
+      "attack_classes_ge3_victims": 0,
+      "all_classes_ge3_victims": 0,
+      "verdict_attack_bar": "NOT_VIABLE",
+      "per_class_victim_counts": {
+        "Backdoor_Malware": 0,
+        "Benign": 1,
+        "BrowserHijacking": 0,
+        "CommandInjection": 0,
+        "DNS_Spoofing": 0,
+        "DictionaryBruteForce": 0,
+        "MITM-ArpSpoofing": 0,
+        "Mirai-greeth_flood": 2,
+        "Mirai-greip_flood": 2,
+        "Mirai-udpplain": 2,
+        "Recon-HostDiscovery": 1,
+        "Recon-OSScan": 0,
+        "Recon-PingSweep": 0,
+        "Recon-PortScan": 0,
+        "SqlInjection": 0,
+        "Uploading_Attack": 0,
+        "VulnerabilityScan": 0,
+        "XSS": 0
+      }
+    }
+  },
+  "victims_5pct_by_class": {
+    "Backdoor_Malware": {
+      "2c:71:ff:05:f1:15": 2164
+    },
+    "Benign": {
+      "40:5d:82:35:14:c8": 2404896
+    },
+    "BrowserHijacking": {
+      "dc:a6:32:dc:27:d5": 4613,
+      "dc:a6:32:c9:e5:02": 5395,
+      "dc:a6:32:c9:e4:c6": 4725
+    },
+    "CommandInjection": {
+      "dc:a6:32:c9:e6:f4": 9870
+    },
+    "DNS_Spoofing": {
+      "dc:a6:32:dc:27:d5": 144331,
+      "56:4f:8a:e1:f3:2d": 193678,
+      "24:05:88:30:6f:89": 101314
+    },
+    "DictionaryBruteForce": {
+      "dc:a6:32:dc:27:d5": 15694,
+      "dc:a6:32:c9:e4:c6": 9491
+    },
+    "MITM-ArpSpoofing": {
+      "08:7c:39:ce:6e:2a": 213709,
+      "56:4f:8a:e1:f3:2d": 227196,
+      "94:39:e5:5d:27:a6": 275703
+    },
+    "Mirai-greeth_flood": {
+      "1c:fe:2b:98:16:dd": 2439864,
+      "9c:8e:cd:1d:ab:9f": 816464
+    },
+    "Mirai-greip_flood": {
+      "1c:12:b0:9b:0c:ec": 1267780,
+      "1c:fe:2b:98:16:dd": 571069,
+      "08:7c:39:ce:6e:2a": 362119,
+      "9c:8e:cd:1d:ab:9f": 1172806
+    },
+    "Mirai-udpplain": {
+      "1c:fe:2b:98:16:dd": 1953500,
+      "08:7c:39:ce:6e:2a": 1262836,
+      "cc:f4:11:9c:d0:00": 346762
+    },
+    "Recon-HostDiscovery": {
+      "dc:a6:32:dc:27:d5": 271577
+    },
+    "Recon-OSScan": {
+      "ac:17:02:05:34:27": 67903,
+      "40:5d:82:35:14:c8": 74585,
+      "dc:a6:32:dc:27:d5": 98446
+    },
+    "Recon-PingSweep": {
+      "ac:17:02:05:34:27": 1962,
+      "70:ee:50:68:0e:32": 1231
+    },
+    "Recon-PortScan": {
+      "ac:17:02:05:34:27": 61438,
+      "dc:a6:32:dc:27:d5": 120941
+    },
+    "SqlInjection": {
+      "ac:17:02:05:34:27": 7334
+    },
+    "Uploading_Attack": {},
+    "VulnerabilityScan": {
+      "ac:17:02:05:34:27": 475971
+    },
+    "XSS": {}
+  },
+  "mirai_victim_union_5pct": [
+    "08:7c:39:ce:6e:2a",
+    "1c:12:b0:9b:0c:ec",
+    "1c:fe:2b:98:16:dd",
+    "9c:8e:cd:1d:ab:9f",
+    "cc:f4:11:9c:d0:00"
+  ]
+}
